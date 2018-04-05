@@ -1,46 +1,44 @@
 <html>
-
-<head>
-<title>The Smartphone Destination!</title>
-<link rel="stylesheet" type="text/css" href="css/nav.css">
-</head>
-<body>
-	
-    <div id="overlay1" onmouseout="off1()"><img src="img1.png" height="200" width="200"></div>
-	<div id="overlay2" onmouseout="off2()"><a href="www.google.co.in">qwertyuiopasdfghjklzxcvbnm</a></div>
-
-	<div class="nav">
-		<div id="overlay" onclick="off()"></div>
-		<button class="dropbtn" onmouseover="on1()">HOME</button>
-		<button class="dropbtn" onmouseover="on2()">TUTORIAL</button>
-		<button class="dropbtn" onmouseover="on()">ARTICLES</button>
-		<button class="dropbtn" onmouseover="on()">INSPIRATION</button>
-		<button class="dropbtn" onmouseover="on()">ABOUT</button>
-	</div>
-	
-	<script>
+	<head>
+		<title>The Smartphone Destination!</title>
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+	</head>	
+	<body>
+		<nav>
+			<div id="overlay1" onmouseout="off1()"><img src="img1.png" height="200" width="200"></div>
+			<div id="overlay2" onmouseout="off2()"><a href="www.google.co.in">placeholder</a></div>
+			<div class="nav">
+				<div id="overlay" onclick="off()"></div>
+				<button class="dropbtn" onmouseover="on1()">BRANDS</button>
+				<button class="dropbtn" onmouseover="on2()">PREMIUM</button>
+				<button class="dropbtn" onmouseover="on()">LATEST</button>
+				<button class="dropbtn" onmouseover="on()">BUDGET</button>
+				<button class="dropbtn" onmouseover="on()">CAMERA</button>
+				<button class="dropbtn" onmouseover="on()">DEV</button>
+				<button class="dropbtn" onmouseover="on()">PRICE</button>
+			</div>
+		</nav>
+		<article>
+			<!--The body of the frame-->
+			<iframe class="">			
+		</article>
+		<script>
 		function on1()
-		{
-	    	document.getElementById("overlay1").style.display = "block";
+			{
+	    		document.getElementById("overlay1").style.display = "block";
 	   		}
-
 		function on2()
-		{
-	    	document.getElementById("overlay2").style.display = "block";
-	    	//document.write("helooooooooooooooooooo");
-		}
-
+			{
+		    	document.getElementById("overlay2").style.display = "block";
+			}
 		function off1() 
-		{
+			{
    			document.getElementById("overlay1").style.display = "none";
-		}
-
+			}	
 		function off2() 
-		{
+			{
    			document.getElementById("overlay2").style.display = "none";
-		}
-
-	</script>
-</body>
-
+			}
+		</script>
+	</body>
 </html>
