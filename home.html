@@ -1,15 +1,47 @@
-<!--This is the homepage-->
-<!DOCTYPE html>
 <html>
+
 <head>
-	<title>Store</title>
-	<script></script>
-	<style></style>
+<title>FLOWER POINT</title>
+<link rel="stylesheet" type="text/css" href="css/nav.css">
 </head>
 <body>
-	<header>
-		<!--This is the header-->
-	</header>
+	
+    <div id="overlay1" onmouseout1="off1()"><a href="www.google.co.in">adsfhathrasrhARSH</a></div>
+	<div id="overlay2" onmouseout2="off2()"><a href="www.google.co.in">qwertyuiopasdfghjklzxcvbnm</a></div>
 
+	<div class="nav">
+		<div id="overlay" onclick="off()"></div>
+		<button class="dropbtn" onmouseover="on1()">HOME</button>
+		<button class="dropbtn" onmouseover="on2()">TUTORIAL</button>
+		<button class="dropbtn" onmouseover="on()">ARTICLES</button>
+		<button class="dropbtn" onmouseover="on()">INSPIRATION</button>
+		<button class="dropbtn" onmouseover="on()">ABOUT</button>
+	</div>
+	
+	<script>
+		function on1()
+		{
+	    	document.getElementById("overlay1").style.display = "block";
+	    	//document.write("helooooooooooooooooooo");
+		}
+
+		function on2()
+		{
+	    	document.getElementById("overlay2").style.display = "block";
+	    	//document.write("helooooooooooooooooooo");
+		}
+
+		function off1() 
+		{
+   			document.getElementById("overlay1").style.display = "none";
+		}
+
+		function off2() 
+		{
+   			document.getElementById("overlay2").style.display = "none";
+		}
+
+	</script>
 </body>
+
 </html>
