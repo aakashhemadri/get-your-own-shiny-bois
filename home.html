@@ -3,64 +3,65 @@
 		<title>The Smartphone Destination!</title>
 		<link rel="stylesheet" type="text/css" href="pages/css/nav.css"/>
 		<link rel="stylesheet" type="text/css" href="pages/css/styles.css">
+		<script src="pages/scripts/scripts.js"></script>
 	</head>
 	<body>
 		<nav>
 			<div id="overlay1"  onmouseleave="off(1)">
 				<a href="https://www.google.com">
-					<img src="images/image1.jpg" alt="Img" width="100px" height="100px">
+					<img src="pages/images/image1.jpg" alt="Img" width="100px" height="100px">
 				</a>
 				<a href="https://www.google.com">
-					<img src="images/image2.jpg" alt="Img" width="100px" height="100px">
-				</a>				
+					<img src="pages/images/image2.jpg" alt="Img" width="100px" height="100px">
+				</a>
 			</div>
 			<div id="overlay2" onmouseleave="off(2)">
 				<a href="https://www.google.com">
-					<img src="images/image3.jpg" alt="Img" width="100px" height="100px">
+					<img src="pages/images/image3.jpg" alt="Img" width="100px" height="100px">
 				</a>
 				<a href="https://www.google.com">
-					<img src="images/image4.jpg" alt="Img" width="100px" height="100px">
-				</a>	
+					<img src="pages/images/image4.jpg" alt="Img" width="100px" height="100px">
+				</a>
 			</div>
 			<div id="overlay3" onmouseleave="off(3)">
 				<a href="https://www.google.com">
-					<img src="images/image1.jpg" alt="Img" width="100px" height="100px">
+					<img src="pages/images/image1.jpg" alt="Img" width="100px" height="100px">
 				</a>
 				<a href="https://www.google.com">
-					<img src="images/image2.jpg" alt="Img" width="100px" height="100px">
-				</a>	
+					<img src="pages/images/image2.jpg" alt="Img" width="100px" height="100px">
+				</a>
 			</div>
 			<div id="overlay4" onmouseleave="off(4)">
 				<a href="https://www.google.com">
-					<img src="images/image3.jpg" alt="Img" width="100px" height="100px">
+					<img src="pages/images/image3.jpg" alt="Img" width="100px" height="100px">
 				</a>
 				<a href="https://www.google.com">
-					<img src="images/image4.jpg" alt="Img" width="100px" height="100px">
-				</a>	
+					<img src="pages/images/image4.jpg" alt="Img" width="100px" height="100px">
+				</a>
 			</div>
 			<div id="overlay5" onmouseleave="off(5)">
 				<a href="https://www.google.com">
-					<img src="images/image1.jpg" alt="Img" width="100px" height="100px">
+					<img src="pages/images/image1.jpg" alt="Img" width="100px" height="100px">
 				</a>
 				<a href="https://www.google.com">
-					<img src="images/image2.jpg" alt="Img" width="100px" height="100px">
-				</a>	
+					<img src="pages/images/image2.jpg" alt="Img" width="100px" height="100px">
+				</a>
 			</div>
 			<div id="overlay6" onmouseleave="off(6)">
 				<a href="https://www.google.com">
-					<img src="images/image3.jpg" alt="Img" width="100px" height="100px">
+					<img src="pages/images/image3.jpg" alt="Img" width="100px" height="100px">
 				</a>
 				<a href="https://www.google.com">
-					<img src="images/image4.jpg" alt="Img" width="100px" height="100px">
-				</a>	
+					<img src="pages/images/image4.jpg" alt="Img" width="100px" height="100px">
+				</a>
 			</div>
 			<div id="overlay7" onmouseleave="off(7)">
 				<a href="https://www.google.com">
-					<img src="images/image1.jpg" alt="Img" width="100px" height="100px">
+					<img src="pages/images/image1.jpg" alt="Img" width="100px" height="100px">
 				</a>
 				<a href="https://www.google.com">
-					<img src="images/image2.jpg" alt="Img" width="100px" height="100px">
-				</a>	
+					<img src="pages/images/image2.jpg" alt="Img" width="100px" height="100px">
+				</a>
 			</div>
 			<div class="nav">
 				<a class="dropbtn" onmouseenter="on(1)">BRANDS</a>
@@ -70,72 +71,12 @@
 				<a class="dropbtn" onmouseenter="on(5)">CAMERA</a>
 				<a class="dropbtn" onmouseenter="on(6)">DEV</a>
 				<a class="dropbtn" onmouseenter="on(7)">PRICE</a>
+				<div style="float:right; margin-right:10%;">
+					<a class="dropbtn" >Contact</a>
+					<a class="dropbtn">Service</a>
+					<a class="dropbtn">Info</a>
+				</div>
 			</div>
 		</nav>
-		<script>
-		function on(val){
-			var x = parseInt(val);
-				var i = 1;
-			while( i < 8 ){
-				if(i != x){
-					off(i);
-				}
-				else
-				{
-					switch(x){
-						case 1:
-						document.getElementById("overlay1").style.display = "block";
-						break;
-						case 2:
-						document.getElementById("overlay2").style.display = "block";
-						break;
-						case 3:
-						document.getElementById("overlay3").style.display = "block";
-						break;
-						case 4:
-						document.getElementById("overlay4").style.display = "block";
-						break;
-						case 5:
-						document.getElementById("overlay5").style.display = "block";
-						break;
-						case 6:
-						document.getElementById("overlay6").style.display = "block";
-						break;
-						case 7:
-						document.getElementById("overlay7").style.display = "block";
-						break;
-					}
-				}
-				i++;
-			}
-		}
-		function off(val)
-			{
-			var x = parseInt(val);
-			switch(x){
-				case 1:
-				document.getElementById("overlay1").style.display = "none";
-				break;
-				case 2:
-				document.getElementById("overlay2").style.display = "none";
-				break;
-				case 3:
-				document.getElementById("overlay3").style.display = "none";
-				break;
-				case 4:
-				document.getElementById("overlay4").style.display = "none";
-				break;
-				case 5:
-				document.getElementById("overlay5").style.display = "none";
-				break;
-				case 6:
-				document.getElementById("overlay6").style.display = "none";
-				break;
-				case 7:
-				document.getElementById("overlay7").style.display = "none";
-				break;
-			}
-		}
-		</script>
-  </body>
+	</body>
 </html>
