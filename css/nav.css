@@ -19,7 +19,7 @@
 
 	.dropbtn1{
 		margin-top: 0px;
-		margin-left: 0		px;
+		margin-left: 0px;
 		background-color : #12529C;
 		padding: 18px 28px;
 		color:white;
@@ -30,7 +30,7 @@
 		
 	}
 	
-	#overlay1,#overlay2 {
+	#overlay1,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7 {
 		position: fixed;
     		display: none;
     		width: 100%;
