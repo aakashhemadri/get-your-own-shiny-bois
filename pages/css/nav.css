@@ -1,61 +1,57 @@
-    .nav{
-        font-family : Arial, Helvetica, sans-seri;
-        background-color : #060202;
-        overflow : hidden;  
-        width : 100%;
-        margin-left: -7px;
-        margin-top: -10px;
+.nav {
+    width: 100%;
+    margin-top: -10px;
+    margin-left: -7px;
+    overflow: hidden;
+    font-family: Arial,Helvetica,sans-seri;
+    background-color: #12529C;
+}
 
-    }
-    
-    .nav a{
-        text-decoration:none;
-        padding: 18px 28px;
-        color:white;
-        text-align:center;
-        float:left;
-        font-size:16px;
-    }
-
-    .dropbtn1{
-        margin-top: 0px;
-        margin-left: 0px;
-        background-color : #12529C;
-        padding: 18px 28px;
-        color:white;
-        text-align:center;
-        border:none;
-        outline:none;
-        font-size:16px;
-        
-    }
-    
-    #overlay1,#overlay2,#overlay3,#overlay4,#overlay5,#overlay6,#overlay7 {
-        position: fixed;
-        display: none;
-        width: 100%;
-        height: 100%;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        background-color: rgba(0,0,0,0.5);
-        z-index: 2;
-        cursor: pointer;
-    }
-
-    
-    .dropbtn:hover{
-        background-color:#ddd;
-        color:black;
-    }
-
-    .text{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    font-size: 50px;
+.nav a {
+    float: left;
+    padding: 18px 28px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
     color: white;
-    transform: translate(-50%,-50%);
-    -ms-transform: translate(-50%,-50%);
+}
+
+.dropbtn1 {
+    margin-top: 0;
+    margin-left: 0;
+    padding: 18px 28px;
+    border: none;
+    text-align: center;
+    font-size: 16px;
+    outline: none;
+    color: white;
+    background-color: #12529C;
+}
+
+#overlay1,
+#overlay2,
+#overlay3,
+#overlay4,
+#overlay5,
+#overlay6,
+#overlay7 {
+    display: none;
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    margin-top: 54px;
+    font-size: 50px;
+    background-color: rgba(1,1,1,0.6);
+    cursor: pointer;
+    transition-delay: 0.5s;
+}
+
+.dropbtn:hover {
+    color: black;
+    background-color: #ddd;
 }
