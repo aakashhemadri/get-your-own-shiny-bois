@@ -2,126 +2,90 @@
 	<head>
 		<title>The Smartphone Destination!</title>
 		<link rel="stylesheet" type="text/css" href="pages/css/nav.css"/>
-	</head>	
+	</head>
 	<body>
 		<nav>
-			<div id="overlay1" onmouseout="off1()">a</div>
-			<div id="overlay2" onmouseout="off2()">b</div>
-			<div id="overlay3" onmouseout="off3()">c</div>
-			<div id="overlay4" onmouseout="off4()">d</div>
-			<div id="overlay5" onmouseout="off5()">e</div>
-			<div id="overlay6" onmouseout="off6()">f</div>
-			<div id="overlay7" onmouseout="off7()">g</div>
+			<div id="overlay1" onmouseout="off(1)">a</div>
+			<div id="overlay2" onmouseout="off(2)">b</div>
+			<div id="overlay3" onmouseout="off(3)">c</div>
+			<div id="overlay4" onmouseout="off(4)">d</div>
+			<div id="overlay5" onmouseout="off(5)">e</div>
+			<div id="overlay6" onmouseout="off(6)">f</div>
+			<div id="overlay7" onmouseout="off(7)">g</div>
 			<div class="nav">
-				<a class="dropbtn" onmouseover="on1()">BRANDS</a>
-				<a class="dropbtn" onmouseover="on2()">PREMIUM</a>
-				<a class="dropbtn" onmouseover="on3()">LATEST</a>
-				<a class="dropbtn" onmouseover="on4()">BUDGET</a>
-				<a class="dropbtn" onmouseover="on5()">CAMERA</a>
-				<a class="dropbtn" onmouseover="on6()">DEV</a>
-				<a class="dropbtn" onmouseover="on7()">PRICE</a>
+				<a class="dropbtn" onmouseover="on(1)">BRANDS</a>
+				<a class="dropbtn" onmouseover="on(2)">PREMIUM</a>
+				<a class="dropbtn" onmouseover="on(3)">LATEST</a>
+				<a class="dropbtn" onmouseover="on(4)">BUDGET</a>
+				<a class="dropbtn" onmouseover="on(5)">CAMERA</a>
+				<a class="dropbtn" onmouseover="on(6)">DEV</a>
+				<a class="dropbtn" onmouseover="on(7)">PRICE</a>
 			</div>
 		</nav>
-		
 		<script>
-		function on1()
-			{	off2();
-				off3();
-				off4();
-				off5();
-				off6();
-				off7();
-	    		document.getElementById("overlay1").style.display = "block";
-
-	   		}
-		function on2()
-			{
-				off1();
-				off3();
-				off4();
-				off5();
-				off6();
-				off7();
-	    		document.getElementById("overlay2").style.display = "block";
+		function on(val){
+			var x = parseInt(val);
+				var i = 1;
+			while( i < 8 ){
+				if(i != x){
+					off(i);
+				}
+				else
+				{
+					switch(x){
+						case 1:
+						document.getElementById("overlay1").style.display = "block";
+						break;
+						case 2:
+						document.getElementById("overlay2").style.display = "block";
+						break;
+						case 3:
+						document.getElementById("overlay3").style.display = "block";
+						break;
+						case 4:
+						document.getElementById("overlay4").style.display = "block";
+						break;
+						case 5:
+						document.getElementById("overlay5").style.display = "block";
+						break;
+						case 6:
+						document.getElementById("overlay6").style.display = "block";
+						break;
+						case 7:
+						document.getElementById("overlay7").style.display = "block";
+						break;
+					}
+				}
+				i++;
 			}
-		function on3()
+		}
+		function off(val)
 			{
-				off1();
-				off2();
-				off4();
-				off5();
-				off6();
-				off7();
-	    		document.getElementById("overlay3").style.display = "block";
+			var x = parseInt(val);
+			switch(x){
+				case 1:
+				document.getElementById("overlay1").style.display = "none";
+				break;
+				case 2:
+				document.getElementById("overlay2").style.display = "none";
+				break;
+				case 3:
+				document.getElementById("overlay3").style.display = "none";
+				break;
+				case 4:
+				document.getElementById("overlay4").style.display = "none";
+				break;
+				case 5:
+				document.getElementById("overlay5").style.display = "none";
+				break;
+				case 6:
+				document.getElementById("overlay6").style.display = "none";
+				break;
+				case 7:
+				document.getElementById("overlay7").style.display = "none";
+				break;
 			}
-		function on4()
-			{
-				off1();
-				off2();
-				off3();
-				off5();
-				off6();
-				off7();
-	    		document.getElementById("overlay4").style.display = "block";
-			}
-		function on5()
-			{
-				off2();
-				off3();
-				off4();
-				off5();
-				off6();
-				off7();
-	    		document.getElementById("overlay5").style.display = "block";
-			}
-		function on6()
-			{
-				off1();
-				off2();
-				off3();
-				off4();
-				off5();
-				off7();
-	    		document.getElementById("overlay6").style.display = "block";
-			}
-		function on7()
-			{
-				off1();
-				off2();
-				off3();
-				off4();
-				off5();
-				off6();
-	    		document.getElementById("overlay7").style.display = "block";
-			}
-		function off1() 
-			{
-   			document.getElementById("overlay1").style.display = "none";
-			}	
-		function off2() 
-			{
-   			document.getElementById("overlay2").style.display = "none";
-			}
-		function off3() 
-			{
-   			document.getElementById("overlay3").style.display = "none";
-			}
-		function off4() 
-			{
-   			document.getElementById("overlay4").style.display = "none";
-			}
-		function off5() 
-			{
-   			document.getElementById("overlay5").style.display = "none";
-			}
-		function off6() 
-			{
-   			document.getElementById("overlay6").style.display = "none";
-			}
-		function off7() 
-			{
-   			document.getElementById("overlay7").style.display = "none";
-			}
+		}
 		</script>
 	</body>
 </html>
