@@ -5,8 +5,40 @@
 		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<script src="scripts/scripts.js"></script>
+		<script type = "text/javascript">
+         	 function displayNextImage() {
+            	  x = (x === images.length - 1) ? 0 : x + 1;
+              	document.getElementById("img").src = images[x];
+          	}
+
+          	function displayPreviousImage() {
+            	  x = (x <= 0) ? images.length - 1 : x - 1;
+              	document.getElementById("img").src = images[x];
+          	}
+
+          	function startTimer() {
+          	    setInterval(displayNextImage, 3000);
+          	}
+
+          var images = [], x = -1;
+          images[0] = "images/image1.jpg";
+          images[1] = "images/image2.jpg";
+          images[2] = "images/image3.jpg";
+      </script>
 	</head>
-	<body>
+	<body onload="startTimer();">
+		<nav>
+			<div class="nav1">
+				<a class="dropbtn">icon 1</a>
+				<a class="dropbtn">icon 2</a>
+				<a class="dropbtn">icon 3</a>
+				<a class="dropbtn">icon 4</a>
+				<div style="float:right; margin-right:10%;">
+					<a class="dropbtn" >login icon</a>
+					<a class="dropbtn">cart icon</a>
+				</div>
+			</div>
+		</nav>
 		<nav>
 			<div id="overlay1"  onmouseleave="off(1)">
 				<a href="https://www.google.com">
@@ -79,5 +111,18 @@
 				</div>
 			</div>
 		</nav>
-	</body>
+		<div class="slide">
+			<img id='img' src="images/image4.jpg" alt="Img" width="100%" height="50%"><br><br>
+			<center>
+				<button type="button" onclick="displayPreviousImage()">Previous</button>&nbsp;&nbsp;&nbsp;
+       			<button type="button" onclick="displayNextImage()">Next</button>
+			</center>
+		</div>
+		<footer>
+			<p align="center">
+				Owned and Founded by get-your-own-shiny-bois<br>
+				&copy;2018 mobilewebsite.com<br>
+			</p>
+		</footer>
+		</body>
 </html>
