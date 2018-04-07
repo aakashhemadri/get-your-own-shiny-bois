@@ -5,37 +5,31 @@
 		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<script src="scripts/scripts.js"></script>
-		<script type = "text/javascript">
-         	 function displayNextImage() {
-            	  x = (x === images.length - 1) ? 0 : x + 1;
-              	document.getElementById("img").src = images[x];
-          	}
-
-          	function displayPreviousImage() {
-            	  x = (x <= 0) ? images.length - 1 : x - 1;
-              	document.getElementById("img").src = images[x];
-          	}
-
-          	function startTimer() {
-          	    setInterval(displayNextImage, 3000);
-          	}
-
-          var images = [], x = -1;
-          images[0] = "images/image1.jpg";
-          images[1] = "images/image2.jpg";
-          images[2] = "images/image3.jpg";
-      </script>
 	</head>
 	<body onload="startTimer();">
 		<nav>
 			<div class="nav1">
-				<a class="dropbtn">icon 1</a>
-				<a class="dropbtn">icon 2</a>
-				<a class="dropbtn">icon 3</a>
-				<a class="dropbtn">icon 4</a>
+				<a class="dropbtn">
+					<img src="images/fb.jpg" alt="search" height="17px" width="17px" class="icon">
+				</a>
+				<a class="dropbtn">
+					<img src="images/twitter.jpg" alt="search" height="17px" width="17px" class="icon">
+				</a>
+				<a class="dropbtn">
+					<img src="images/gplus.jpg" alt="search" height="13px" width="13px" class="icon">
+				</a>
+				<a class="dropbtn">
+					<img src="images/insta.jpg" alt="search" height="13px" width="13px" class="icon">
+				</a>
 				<div style="float:right; margin-right:10%;">
-					<a class="dropbtn" >login icon</a>
-					<a class="dropbtn">cart icon</a>
+					<a class="dropbtn">
+						<img src="images/login.jpg" alt="search" height="12px" width="12px" class="icon">
+					</a>
+					<a class="dropbtn">
+						<img src="images/cart.jpg" alt="search" height="14" width="14px" class="icon">
+					</a>
+					<img src="images/search.jpg" alt="search" height="12px" width="12px" class="icon">
+					<input type="text" name="" placeholder="Product name" class="search">
 				</div>
 			</div>
 		</nav>
@@ -118,6 +112,19 @@
        			<button type="button" onclick="displayNextImage()">Next</button>
 			</center>
 		</div>
+		<div>
+			<p style="font-family: Lucida Console;font-size: 20px;color: red">New Arrivals!!!</p>
+			<div style="float:left;width:100%;margin-left: 250px;">
+				<img id='img' class="arrivals" src="images/image4.jpg" alt="Img" width="150px" height="150px">
+				<img id='img' class="arrivals" src="images/image3.jpg" alt="Img" width="150px" height="150px">
+				<img id='img' class="arrivals" src="images/image2.jpg" alt="Img" width="150px" height="150px">
+				<img id='img' class="arrivals" src="images/image1.jpg" alt="Img" width="150px" height="150px">
+			</div><br><br>
+		</div>
+		<div>
+			<p style="font-family: Lucida Console;font-size: 20px;color: red">Our Brands</p>
+			<!--Images are to be inserted-->
+		</div><br><br><br><br><br><br>
 		<footer>
 			<p align="center">
 				Owned and Founded by get-your-own-shiny-bois<br>
