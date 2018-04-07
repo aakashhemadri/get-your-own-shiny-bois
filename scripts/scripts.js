@@ -74,6 +74,7 @@ function startTimer() {
             }
 
           var images = [], x = -1;
-          images[0] = "images/image1.jpg";
-          images[1] = "images/image2.jpg";
-          images[2] = "images/image3.jpg";
+          images[0] = "images/Pixel.jpg";
+          images[1] = "images/s9+.jpg";
+          images[2] = "images/sony.jpg";
+          images[3] = "images/iphonex1.jpg";
