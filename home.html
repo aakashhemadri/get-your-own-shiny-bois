@@ -2,7 +2,7 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>The Smartphone Destination!</title>
-		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|East+Sea+Dokdo" rel="stylesheet"> 
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|East+Sea+Dokdo" rel="stylesheet">
 		<!--<link rel="stylesheet" type="text/css" href="css/font-face.css">-->
 		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -10,128 +10,47 @@
 	</head>
 	<body onload="startTimer();">
 		<nav>
-			<div class="nav1">
-				<a class="dropbtn">
-					<img src="images/fb.jpg" alt="search" height="17px" width="17px" class="icon">
-				</a>
-				<a class="dropbtn">
-					<img src="images/twitter.jpg" alt="search" height="17px" width="17px" class="icon">
-				</a>
-				<a class="dropbtn">
-					<img src="images/gplus.jpg" alt="search" height="13px" width="13px" class="icon">
-				</a>
-				<a class="dropbtn">
-					<img src="images/insta.jpg" alt="search" height="13px" width="13px" class="icon">
-				</a>
-				<div style="float:right; margin-right:10%;">
-					<a class="dropbtn">
-						<img src="images/login.jpg" alt="search" height="12px" width="12px" class="icon">
-					</a>
-					<a class="dropbtn">
-						<img src="images/cart.jpg" alt="search" height="14" width="14px" class="icon">
-					</a>
-					<img src="images/search.jpg" alt="search" height="12px" width="12px" class="icon">
-					<input type="text" name="" placeholder="Product name" class="search">
+			<div id="upperNav">
+				<a><img src="images/fb.jpg" alt="search" height="17px" width="17px"></a>
+				<a><img src="images/twitter.jpg" alt="search" height="17px" width="17px"></a>
+				<a><img src="images/gplus.jpg" alt="search" height="13px" width="13px"></a>
+				<a><img src="images/insta.jpg" alt="search" height="13px" width="13px"></a>
+				<div style="float:right;margin-right: 10px;">
+					<a><img src="images/login.jpg" alt="search" height="12px" width="12px"></a>
+					<a><img src="images/cart.jpg" alt="search" height="14" width="14px"></a>
+					<a><img src="images/search.jpg" alt="search" height="12px" width="12px"></a>
+					<input type="text" name="" placeholder="Product name">
 				</div>
 			</div>
 		</nav>
 		<nav>
-			<div id="overlay1"  onmouseleave="off(1)">
-				<a href="https://www.google.com">
-					<img src="images/image1.jpg" alt="Img" width="100px" height="100px">
-				</a>
-				<a href="https://www.google.com">
-					<img src="images/image2.jpg" alt="Img" width="100px" height="100px">
-				</a>
-			</div>
-			<div id="overlay2" onmouseleave="off(2)">
-				<a href="https://www.google.com">
-					<img src="images/image3.jpg" alt="Img" width="100px" height="100px">
-				</a>
-				<a href="https://www.google.com">
-					<img src="images/image4.jpg" alt="Img" width="100px" height="100px">
-				</a>
-			</div>
-			<div id="overlay3" onmouseleave="off(3)">
-				<a href="https://www.google.com">
-					<img src="images/image1.jpg" alt="Img" width="100px" height="100px">
-				</a>
-				<a href="https://www.google.com">
-					<img src="images/image2.jpg" alt="Img" width="100px" height="100px">
-				</a>
-			</div>
-			<div id="overlay4" onmouseleave="off(4)">
-				<a href="https://www.google.com">
-					<img src="images/image3.jpg" alt="Img" width="100px" height="100px">
-				</a>
-				<a href="https://www.google.com">
-					<img src="images/image4.jpg" alt="Img" width="100px" height="100px">
-				</a>
-			</div>
-			<div id="overlay5" onmouseleave="off(5)">
-				<a href="https://www.google.com">
-					<img src="images/image1.jpg" alt="Img" width="100px" height="100px">
-				</a>
-				<a href="https://www.google.com">
-					<img src="images/image2.jpg" alt="Img" width="100px" height="100px">
-				</a>
-			</div>
-			<div id="overlay6" onmouseleave="off(6)">
-				<a href="https://www.google.com">
-					<img src="images/image3.jpg" alt="Img" width="100px" height="100px">
-				</a>
-				<a href="https://www.google.com">
-					<img src="images/image4.jpg" alt="Img" width="100px" height="100px">
-				</a>
-			</div>
-			<div id="overlay7" onmouseleave="off(7)">
-				<a href="https://www.google.com">
-					<img src="images/image1.jpg" alt="Img" width="100px" height="100px">
-				</a>
-				<a href="https://www.google.com">
-					<img src="images/image2.jpg" alt="Img" width="100px" height="100px">
-				</a>
-			</div>
-			<div class="nav">
-				<a class="dropbtn" onmouseenter="on(1)">BRANDS</a>
-				<a class="dropbtn" onmouseenter="on(2)">PREMIUM</a>
-				<a class="dropbtn" onmouseenter="on(3)">LATEST</a>
-				<a class="dropbtn" onmouseenter="on(4)">BUDGET</a>
-				<a class="dropbtn" onmouseenter="on(5)">CAMERA</a>
-				<a class="dropbtn" onmouseenter="on(6)">DEV</a>
-				<a class="dropbtn" onmouseenter="on(7)">PRICE</a>
-				<div style="float:right; margin-right:10%;">
-					<a class="dropbtn" >Contact</a>
-					<a class="dropbtn">Service</a>
-					<a class="dropbtn">Info</a>
+			<div id="lowerNav">
+				<a onmouseclick="">BRANDS</a>
+				<a onmouseclick="">PREMIUM</a>
+				<a onmouseclick="">LATEST</a>
+				<a onmouseclick="">BUDGET</a>
+				<a onmouseclick="">CAMERA</a>
+				<a onmouseclick="">DEV</a>
+				<a onmouseclick="">PRICE</a>
+				<div style="float:right;margin-right: 10px;">
+					<a >CONTACT</a>
+					<a>SERVICE</a>
+					<a>ABOUT</a>
 				</div>
 			</div>
 		</nav>
-		<div class="slide">
-			<img id='img' src="images/iphonex2.jpg" alt="Img" width="100%" height="100%"><br><br>
+		<div>
+			<img id='img' src="images/iphonex2.jpg" alt="image" width="100%" height="100%">
 			<center>
-				<button type="button" onclick="displayPreviousImage()" class="slideshow_button">Previous</button>&nbsp;&nbsp;&nbsp;
-       			<button type="button" onclick="displayNextImage()" class="slideshow_button">Next</button>
+			<button type="button" onclick="displayPreviousImage()">Previous</button>&nbsp;&nbsp;&nbsp;
+			<button type="button" onclick="displayNextImage()">Next</button>
 			</center>
 		</div>
-		<div>
-			<p style="font-family: Lucida Console;font-size: 20px;color: red">New Arrivals!!!</p>
-			<div style="float:left;width:100%;margin-left: 250px;">
-				<img id='img' class="arrivals" src="images/brand1.jpg" alt="Img" width="150px" height="150px">
-				<img id='img' class="arrivals" src="images/brand2.jpg" alt="Img" width="150px" height="150px">
-				<img id='img' class="arrivals" src="images/brand3.jpg" alt="Img" width="150px" height="150px">
-				<img id='img' class="arrivals" src="images/brand4.jpg" alt="Img" width="150px" height="150px">
-			</div><br><br>
-		</div>
-		<div>
-			<p style="font-family: Lucida Console;font-size: 20px;color: red">Our Brands</p>
-			<!--Images are to be inserted-->
-		</div><br><br><br><br><br><br>
 		<footer>
-			<p align="center">
+			<p>
 				Owned and Founded by get-your-own-shiny-bois<br>
 				&copy;2018 mobilewebsite.com<br>
 			</p>
 		</footer>
-		</body>
+	</body>
 </html>
