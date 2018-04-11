@@ -2,10 +2,10 @@
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>The Smartphone Destination!</title>
-		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|East+Sea+Dokdo" rel="stylesheet">
 		<!--<link rel="stylesheet" type="text/css" href="css/font-face.css">-->
-		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
+		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|East+Sea+Dokdo" rel="stylesheet">
 		<script src="scripts/scripts.js"></script>
 	</head>
 	<body onload="startTimer();">
@@ -25,32 +25,38 @@
 		</nav>
 		<nav>
 			<div id="lowerNav">
-				<a onmouseclick="">BRANDS</a>
-				<a onmouseclick="">PREMIUM</a>
-				<a onmouseclick="">LATEST</a>
-				<a onmouseclick="">BUDGET</a>
-				<a onmouseclick="">CAMERA</a>
-				<a onmouseclick="">DEV</a>
-				<a onmouseclick="">PRICE</a>
+				<a href="pages/brands.html">BRANDS</a>
+				<a href="#pPremium">PREMIUM</a>
+				<a href="#pLatest">LATEST</a>
+				<a href="#pBudget">BUDGET</a>
+				<a href="pCamera">CAMERA</a>
+				<a href="pDev">DEV</a>
+				<a href="pPrice">PRICE</a>
 				<div style="float:right;margin-right: 10px;">
-					<a >CONTACT</a>
-					<a>SERVICE</a>
-					<a>ABOUT</a>
+					<a href="pContact">CONTACT</a>
+					<a href="pService">SERVICE</a>
+					<a href="pAbout">ABOUT</a>
 				</div>
 			</div>
 		</nav>
-		<div>
-			<img id='img' src="images/iphonex2.jpg" alt="image" width="100%" height="100%">
+		<div><!--Pictures needs replacing! This is not redundant code-->
+			<!--<img id='img' src="images/iphonex2.jpg" alt="image" width="100%" height="100%">
 			<center>
 			<button type="button" onclick="displayPreviousImage()">Previous</button>&nbsp;&nbsp;&nbsp;
 			<button type="button" onclick="displayNextImage()">Next</button>
-			</center>
+			</center>-->
 		</div>
-		<footer>
+		<div id="#pBrands">
+		
+		</div>
+		<div id="#pPremium">
+			
+		</div>
+		<!--<footer>
 			<p>
 				Owned and Founded by get-your-own-shiny-bois<br>
 				&copy;2018 mobilewebsite.com<br>
 			</p>
-		</footer>
+		</footer>-->
 	</body>
 </html>
