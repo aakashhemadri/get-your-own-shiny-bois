@@ -1,5 +1,11 @@
+*{
+	-webkit-transition-delay: 500ms;
+	transition-delay: 500ms;
+	overflow: hidden;
+}
 body {
     width: 100%;
+    height: 400%;
     margin: 0;
     font-family: 'East Sea Dokdo';
     color: white;
@@ -20,8 +26,6 @@ nav div a img {
 
 div image {
     float: left;
-    width: 100%;
-    height: 100%;
     margin-left: -10px;
 }
 
@@ -36,8 +40,12 @@ div button {
 div button:hover {
     background-color: #020202;
 }
-
+div#pBrand {
+	
+}
 footer {
+	position: fixed;
+	bottom: 0;
     text-align: center;
     font-size: 25px;
 }
