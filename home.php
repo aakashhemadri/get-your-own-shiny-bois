@@ -16,7 +16,7 @@
 				<a><img src="images/gplus.jpg" alt="search" height="13px" width="13px"></a>
 				<a><img src="images/insta.jpg" alt="search" height="13px" width="13px"></a>
 				<div style="float:right;margin-right: 10px;">
-					<a><img src="images/login.jpg" alt="search" height="12px" width="12px"></a>
+					<a><img src="images/login.jpg" alt="search" height="12px" width="12px" href="pages/login.html"></a>
 					<a><img src="images/cart.jpg" alt="search" height="14" width="14px"></a>
 					<a><img src="images/search.jpg" alt="search" height="12px" width="12px"></a>
 					<input type="text" name="" placeholder="Product name">
