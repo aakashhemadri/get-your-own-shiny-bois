@@ -6,7 +6,7 @@
 		<link rel="stylesheet" type="text/css" href="css/styles.css">
 		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|East+Sea+Dokdo" rel="stylesheet">
-		<script src="scripts/scripts.js"></script>
+		<script src="scripts/slide.js"></script>
 	</head>
 	<body onload="startTimer();">
 		<nav>
@@ -52,11 +52,11 @@
 		<div id="#pPremium">
 			
 		</div>
-		<!--<footer>
+		<footer>
 			<p>
-				Owned and Founded by get-your-own-shiny-bois<br>
-				&copy;2018 mobilewebsite.com<br>
+				Owned and Founded by gadgets4you<br>
+				&copy;2018 gadgets4you.com<br>
 			</p>
-		</footer>-->
+		</footer>
 	</body>
 </html>

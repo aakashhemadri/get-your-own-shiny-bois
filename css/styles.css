@@ -41,8 +41,7 @@ div#pBrand {
 	
 }
 footer {
-	position: fixed;
-	bottom: 0;
+    float: left;
     text-align: center;
     font-size: 25px;
 }
