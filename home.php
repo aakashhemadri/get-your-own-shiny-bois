@@ -1,4 +1,4 @@
-<html>
+	<html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>The Smartphone Destination!</title>
@@ -40,7 +40,7 @@
 			</div>
 		</nav>
 		<div><!--Pictures needs replacing! This is not redundant code-->
-			<img id='img' src="images/iphonex2.jpg" alt="image" width="100%">
+			<img id='img' src="images/slide1.jpg" alt="image" width="100%">
 			<center>
 			<button type="button" onclick="displayPreviousImage()">Previous</button>&nbsp;&nbsp;&nbsp;
 			<button type="button" onclick="displayNextImage()">Next</button>
