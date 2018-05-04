@@ -6,7 +6,7 @@ body {
     margin: 0;
     font-family: 'East Sea Dokdo';
     color: white;
-    background-color: #3A3939;
+    background-color: #020202;
 }
 
 nav div input {
@@ -31,7 +31,7 @@ div button {
     border: none;
     outline: none;
     color: white;
-    background-color: #3A3939;
+    background-color: #020202;
 }
 
 div button:hover {

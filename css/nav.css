@@ -38,3 +38,46 @@ nav div#lowerNav a:hover {
     color: #020202;
     background-color: #ddd;
 }
+
+/* SIDE NAV */
+
+#bra{
+    width:12%;
+    background-color: #FFDCDB;
+    height:5%;
+    text-align:center;
+    font-size:23px;
+    color: violet;
+}
+.side{
+        float:left;
+        width:12%;
+        background-color:#FFDCDB;
+        text-align:center;
+        font-size:23px;
+        margin-top: 0px;
+        border:2px hidden black;
+        height:50%px;
+    }
+    
+    .side a{
+        display:block;
+        padding:10px 10px;
+        text-decoration : none;
+    }
+    
+    .side a:hover{
+        background-color:#33cc33;
+        color:white;
+    }
+
+
+div#products{
+    float: left;
+    width: 50%;
+}
+
+div#sep{
+    width: 25%;
+    float:left;
+}
