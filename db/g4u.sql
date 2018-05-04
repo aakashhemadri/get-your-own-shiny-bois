@@ -2,8 +2,8 @@
 -- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: May 04, 2018 at 02:02 PM
+-- Host: 127.0.0.1
+-- Generation Time: May 04, 2018 at 02:17 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -62,7 +62,8 @@ CREATE TABLE `product` (
   `pwifi` varchar(40) NOT NULL,
   `pbluetooth` varchar(40) NOT NULL,
   `pusb` varchar(40) NOT NULL,
-  `ptag` varchar(20) NOT NULL
+  `ptag` varchar(20) NOT NULL,
+  `pimage` longblob NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
