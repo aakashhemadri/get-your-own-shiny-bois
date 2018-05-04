@@ -9,11 +9,15 @@
 		<script src="scripts/slide.js"></script>
 		<?php
 		//SETTING CURRENT USER
-			if($_POST['uid']!=NULL)
+			if(isset($_POST['uid']))
 				$username = $_POST['uid'];//After validation
 			else
 				$username = "Guest";
 		//SETTING CART DETAILS BY FETCHING DATABASE INFO
+			$conn = new mysqli("localhost","root","","g4u");
+			$USER_ = $conn->query("SELECT * from 'user' where '$username'");
+			$CART_ = $conn->query("SELECT * from 'cart'");
+		//	$LIST_ = $conn->query("SELECT * from 'list'")
 		?>
 	</head>
 	<body onload="startTimer();">
@@ -24,7 +28,7 @@
 				<a><img src="images/nav/gplus.jpg" alt="search" height="13px" width="13px"></a>
 				<a><img src="images/nav/insta.jpg" alt="search" height="13px" width="13px"></a>
 				<div style="float:right;margin-right: 10px;">
-					<a href="pages/login.php"><img src="images/nav/login.jpg" alt="search" height="12px" width="12px" href="pages/login.html"></a>
+					<a href="pages/login.php"><img src="images/nav/login.jpg" alt="search" height="12px" width="12px" href="pages/login.php"></a>
 					<a href="pages/cart.php"><img src="images/nav/cart.jpg" alt="search" height="14" width="14px"></a>
 					<a><img src="images/nav/search.jpg" alt="search" height="12px" width="12px"></a>
 					<input type="text" name="" placeholder="Product name">
