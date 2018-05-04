@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 03, 2018 at 11:08 PM
+-- Generation Time: May 04, 2018 at 02:02 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -38,6 +38,36 @@ CREATE TABLE `cart` (
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `product`
+--
+
+CREATE TABLE `product` (
+  `pid` varchar(10) NOT NULL,
+  `pmodel` varchar(10) NOT NULL,
+  `pname` varchar(10) NOT NULL,
+  `pdesc` varchar(50) NOT NULL,
+  `pdimension` varchar(40) NOT NULL,
+  `pweight` varchar(40) NOT NULL,
+  `psoc` varchar(40) NOT NULL,
+  `pcpu` varchar(40) NOT NULL,
+  `pgpu` varchar(40) NOT NULL,
+  `pram` varchar(40) NOT NULL,
+  `pstorage` varchar(40) NOT NULL,
+  `pmemory` varchar(40) NOT NULL,
+  `pdisplay` varchar(40) NOT NULL,
+  `pbattery` varchar(40) NOT NULL,
+  `pos` varchar(40) NOT NULL,
+  `pcamera` varchar(40) NOT NULL,
+  `psim` varchar(40) NOT NULL,
+  `pwifi` varchar(40) NOT NULL,
+  `pbluetooth` varchar(40) NOT NULL,
+  `pusb` varchar(40) NOT NULL,
+  `ptag` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `user`
 --
 
@@ -56,6 +86,12 @@ CREATE TABLE `user` (
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
+  ADD PRIMARY KEY (`pid`);
+
+--
+-- Indexes for table `product`
+--
+ALTER TABLE `product`
   ADD PRIMARY KEY (`pid`);
 
 --
