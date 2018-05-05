@@ -2,8 +2,9 @@
   require '../php/connect.php';
 
   // Define variables and initialize with empty values
-  $username = $password = $confirm_password = "";
-  $username_err = $password_err = $confirm_password_err = "";
+  $username = $password = $confirm_password = $email = "";
+  $username_err = $password_err = $confirm_password_err = $email_err = "";
+
 
   // Processing form data when form is submitted
 
@@ -14,7 +15,7 @@
       } 
       else{
           // Prepare a select statement
-          $sql = "SELECT id FROM users WHERE username = ?";
+          $sql = "SELECT uid FROM user WHERE username = ?";
           if($stmt = mysqli_prepare($db, $sql)){
               // Bind variables to the prepared statement as parameters
               mysqli_stmt_bind_param($stmt, "s", $param_username);
@@ -55,16 +56,34 @@
               $confirm_password_err = 'Password did not match.';
           }
       }
+      // Validate email
+      if(empty(trim($_POST['email']))){
+          $email_err = "Please enter an email.";     
+      } elseif(!filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)){
+          $email_err = "Invalid email format";
+      } else{
+          $email = trim($_POST['email']);
+      }
+      // Validate confirm password
+      if(empty(trim($_POST["confirm_password"]))){
+          $confirm_password_err = 'Please confirm password.';     
+      } else{
+          $confirm_password = trim($_POST['confirm_password']);
+          if($password != $confirm_password){
+              $confirm_password_err = 'Password did not match.';
+          }
+      }
       // Check input errors before inserting in database
-      if(empty($username_err) && empty($password_err) && empty($confirm_password_err)){
+      if(empty($username_err) && empty($password_err) && empty($confirm_password_err) && empty($email_err)){
           // Prepare an insert statement
-          $sql = "INSERT INTO users (username, password) VALUES (?, ?)";
+          $sql = "INSERT INTO user (username, password, email) VALUES (?, ?, ?)";
           if($stmt = mysqli_prepare($db, $sql)){
               // Bind variables to the prepared statement as parameters
-              mysqli_stmt_bind_param($stmt, "ss", $param_username, $param_password);
+              mysqli_stmt_bind_param($stmt, "sss", $param_username, $param_password, $param_email);
               // Set parameters
               $param_username = $username;
               $param_password = password_hash($password, PASSWORD_DEFAULT); // Creates a password hash
+              $param_email = $email;
               // Attempt to execute the prepared statement
               if(mysqli_stmt_execute($stmt)){
                   // Redirect to login page
@@ -95,6 +114,9 @@
     <h1>Sign Up</h1>
     <p>Please fill in this form to create an account.</p>
     <hr>
+      <label>Email</label>
+        <input type="text" name="email" value="<?php echo $email; ?>">
+        <span class="help-block"><?php echo $email_err; ?></span>
       <label>Username</label>
         <input type="text" name="username" value="<?php echo $username; ?>">
         <span class="help-block"><?php echo $username_err; ?></span>
