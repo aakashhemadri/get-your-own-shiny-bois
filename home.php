@@ -1,3 +1,27 @@
+<?php
+	//error_reporting(0);
+	require 'php/connect.php';
+
+	// Define variables and initialize with empty values
+	$username = $password = $confirm_password = "guest";	
+	$username_err = $password_err = $confirm_password_err = "";
+
+	$g4u_user = $db->query("SELECT * FROM user");
+	$g4u_cart = $db->query("SELECT * FROM cart");
+
+	//SETTING CURRENT USER
+		if(isset($_POST['uid']))
+			$username = $_POST['uid'];//After validation
+		else
+			$username = "Guest";
+	//SETTING CART DETAILS BY FETCHING DATABASE INFO
+		$conn = new mysqli("localhost","root","","g4u");
+		$USER_ = $conn->query("SELECT * from 'user' where '$username'");
+		$CART_ = $conn->query("SELECT * from 'cart'");
+	//	$LIST_ = $conn->query("SELECT * from 'list'")
+?>
+
+
 <html>
 	<head>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,18 +31,6 @@
 		<link rel="stylesheet" type="text/css" href="css/nav.css"/>
 		<link href="https://fonts.googleapis.com/css?family=Do+Hyeon|East+Sea+Dokdo" rel="stylesheet">
 		<script src="scripts/slide.js"></script>
-		<?php
-		//SETTING CURRENT USER
-			if(isset($_POST['uid']))
-				$username = $_POST['uid'];//After validation
-			else
-				$username = "Guest";
-		//SETTING CART DETAILS BY FETCHING DATABASE INFO
-			$conn = new mysqli("localhost","root","","g4u");
-			$USER_ = $conn->query("SELECT * from 'user' where '$username'");
-			$CART_ = $conn->query("SELECT * from 'cart'");
-		//	$LIST_ = $conn->query("SELECT * from 'list'")
-		?>
 	</head>
 	<body onload="startTimer();">
 		<nav>
