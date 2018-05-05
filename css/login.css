@@ -75,3 +75,9 @@ button:hover {
     margin-left: 30%;
     margin-top: 1%;
 }
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
+}
