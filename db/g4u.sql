@@ -63,7 +63,8 @@ CREATE TABLE `product` (
   `pbluetooth` varchar(40) NOT NULL,
   `pusb` varchar(40) NOT NULL,
   `ptag` varchar(20) NOT NULL,
-  `pimage` longblob NOT NULL
+  `pimage` longblob NOT NULL,
+  `pprice` varchar(40) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
