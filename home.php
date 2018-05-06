@@ -82,50 +82,12 @@
 		</div><br>
 
 		<div class="side">
-			<a href="">SAMSUNG</a><br>
+			<a href="product.php">SAMSUNG</a><br>
 			<a href="">APPLE</a><br>
 			<a href="">VIVO</a><br>
 			<a href="">XIAOMI</a><br>
 			<a href="">OPPO</a><br>
 			<a href="">lg</a>
-		</div>
-
-		<div id="products">
-			<div id="sep">
-				<div id="img">
-					<img src="">
-				</div>
-				<div id="data">
-					srhrhrw
-				</div>
-			</div>
-			<div id="sep">
-				<div id="img">
-					eaheh
-				</div>
-				<div id="data">
-					qehehwe
-				</div>
-			</div>
-
-			<div id="sep">
-				<div id="img">
-					kjea.keg
-				</div>
-				<div id="data">
-					kluwrwig
-				</div>
-			</div>
-
-			<div id="sep">
-				<div id="img">
-					K.JBKE/G
-				</div>
-				<div id="data">
-				LBWAOGIBI
-				</div>
-			</div>
-
 		</div>
 		
 		<?php

@@ -20,12 +20,19 @@ $result = $conn->query($sql);
 
 <head>
 	<title></title>
+	<style>
+		div#desc{
+			float: right;
+		}
+	</style>
+	<link rel="stylesheet" type="text/css" href="css/styles.css">
 
 </head>
 
 <body>
-	<p align="right">
-	<table cellpadding="5px">		
+	<img src="images/slide4.jpg" height="100%" width="50%">
+	<div id="desc">
+		<table cellpadding="5px">		
 		<tbody>
 		<?php
 		if ($result->num_rows > 0) 
@@ -123,7 +130,7 @@ $result = $conn->query($sql);
 		?>
 		</tbody>
 	</table>
-</p>
-</body>
+	</div>
+	</body>
 
 </html>
