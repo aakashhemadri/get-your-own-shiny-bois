@@ -1,12 +1,23 @@
 <?php
 	//error_reporting(0);
+	session_start();
+	if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
+		$_SESSION['username'] = "guest";
+	}
 	require 'php/connect.php';
 
-	// Define variables and initialize with empty values
-	$username = $password = $confirm_password = "guest";	
-	$username_err = $password_err = $confirm_password_err = "";
+$username = "Guest"
+/**********************CART ADDITION*********************
 
-	$g4u_user = $db->query("SELECT * FROM user");
+	//Preparing select statement
+	$sql = "SELECT * from cart WHERE ";
+	//Preparing statement for query!
+	if($stmt = mysqli_prepare($db, $sql)){
+		//Binding variables to the prepared statement as parameters!
+		mysqli_stmt_bind_param($stmt, "s");
+	}
+	$username = $_SESSION['username'];
+	/*
 	$g4u_cart = $db->query("SELECT * FROM cart");
 
 	//SETTING CURRENT USER
@@ -18,7 +29,7 @@
 		$conn = new mysqli("localhost","root","","g4u");
 		$USER_ = $conn->query("SELECT * from 'user' where '$username'");
 		$CART_ = $conn->query("SELECT * from 'cart'");
-	//	$LIST_ = $conn->query("SELECT * from 'list'")
+	//	$LIST_ = $conn->query("SELECT * from 'list'")*/
 ?>
 
 
@@ -40,6 +51,7 @@
 				<a><img src="images/nav/gplus.jpg" alt="search" height="13px" width="13px"></a>
 				<a><img src="images/nav/insta.jpg" alt="search" height="13px" width="13px"></a>
 				<div style="float:right;margin-right: 10px;">
+					<a href="#"><?php echo "Welcome!, $username "?></a>
 					<a href="pages/login.php"><img src="images/nav/login.jpg" alt="search" height="12px" width="12px" href="pages/login.php"></a>
 					<a href="pages/cart.php"><img src="images/nav/cart.jpg" alt="search" height="14" width="14px"></a>
 					<a><img src="images/nav/search.jpg" alt="search" height="12px" width="12px"></a>
@@ -87,7 +99,23 @@
 			<a href="">VIVO</a><br>
 			<a href="">XIAOMI</a><br>
 			<a href="">OPPO</a><br>
-			<a href="">lg</a>
+			<a href="">LG</a>
+		</div>
+			}*/
+				}
+					}
+						mysqli_fetch_assoc();
+					if(mysqli_stmt_num_rows($stmt) > 0){
+						$num = mysql_num_rows($results);
+					mysqli_stmt_store_result($stmt);
+				if(mysqli_stmt_execute($stmt)){
+			if($stmt = mysqli_prepare($db, $sql)){
+			//Preparing statement for query!
+			$sql = "SELECT * from product WHERE ptag = FEATURED";
+			/**********************PRODUCTS*************************
+			//Preparing select statement
+			<?php/*
+		<div id="products">
 		</div>
 		
 		<?php

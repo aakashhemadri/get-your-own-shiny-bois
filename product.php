@@ -1,19 +1,9 @@
  <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "g4u";
-
-// Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
+require '../php/connect.php'
 
 $sql = "SELECT pid, pname, pmodel, pdimension, pweight, pcpu, pgpu, pdesc, pram, pdisplay, pstorage, pmemory, pos, pbattery,pcamera, psim, pwifi, pbluetooth, pusb, pprice
 	FROM product";
-$result = $conn->query($sql);
+$result = $db->query($sql);
 ?>
 
 <html>
@@ -126,7 +116,7 @@ $result = $conn->query($sql);
 		{
     		echo "0 results";
     	}
-				$conn->close();
+				$db->close();
 		?>
 		</tbody>
 	</table>
