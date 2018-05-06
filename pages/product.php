@@ -1,8 +1,6 @@
  <?php
-require '../php/connect.php'
-
-$sql = "SELECT pid, pname, pmodel, pdimension, pweight, pcpu, pgpu, pdesc, pram, pdisplay, pstorage, pmemory, pos, pbattery,pcamera, psim, pwifi, pbluetooth, pusb, pprice
-	FROM product";
+require '../php/connect.php';
+$sql = "SELECT * FROM product";
 $result = $db->query($sql);
 ?>
 
@@ -15,12 +13,12 @@ $result = $db->query($sql);
 			float: right;
 		}
 	</style>
-	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="../css/styles.css">
 
 </head>
 
 <body>
-	<img src="images/slide4.jpg" height="100%" width="50%">
+	<img src="../images/slide4.jpg" height="100%" width="50%">
 	<div id="desc">
 		<table cellpadding="5px">		
 		<tbody>

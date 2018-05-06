@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost
--- Generation Time: May 05, 2018 at 04:02 PM
+-- Generation Time: May 06, 2018 at 08:11 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -29,9 +29,7 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
-  `pid` varchar(20) NOT NULL,
-  `pname` varchar(20) NOT NULL,
-  `pprice` int(20) NOT NULL,
+  `cid` int(11) NOT NULL,
   `pmodel` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
@@ -90,11 +88,18 @@ INSERT INTO `product` (`pid`, `pmodel`, `pname`, `pdesc`, `pdimension`, `pweight
 --
 
 CREATE TABLE `user` (
-  `uid` varchar(16) NOT NULL,
-  `username` varchar(30) NOT NULL,
+  `uid` int(11) NOT NULL,
+  `username` varchar(32) NOT NULL,
   `password` varchar(128) NOT NULL,
-  `uemail` varchar(128) NOT NULL
+  `email` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`uid`, `username`, `password`, `email`) VALUES
+(1, 'aakashhemadri', '$2y$10$PQLwo/dLI3M2mokk6T02SObZNfgiqxq9VAo9TehNGL2UuxFIzWW7e', 'aakashhemadri123@gmail.com');
 
 --
 -- Indexes for dumped tables
@@ -104,7 +109,7 @@ CREATE TABLE `user` (
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
-  ADD PRIMARY KEY (`pid`);
+  ADD PRIMARY KEY (`cid`);
 
 --
 -- Indexes for table `product`
@@ -116,17 +121,30 @@ ALTER TABLE `product`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
-  ADD PRIMARY KEY (`uid`);
+  ADD PRIMARY KEY (`username`),
+  ADD KEY `uid` (`uid`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
+-- AUTO_INCREMENT for table `cart`
+--
+ALTER TABLE `cart`
+  MODIFY `cid` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
   MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+
+--
+-- AUTO_INCREMENT for table `user`
+--
+ALTER TABLE `user`
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
