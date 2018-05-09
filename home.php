@@ -100,21 +100,21 @@ $username = "Guest"
 			<a href="">XIAOMI</a><br>
 			<a href="">OPPO</a><br>
 			<a href="">LG</a>
-		</div>
-			}*/
-				}
-					}
-						mysqli_fetch_assoc();
-					if(mysqli_stmt_num_rows($stmt) > 0){
-						$num = mysql_num_rows($results);
-					mysqli_stmt_store_result($stmt);
-				if(mysqli_stmt_execute($stmt)){
-			if($stmt = mysqli_prepare($db, $sql)){
-			//Preparing statement for query!
-			$sql = "SELECT * from product WHERE ptag = FEATURED";
+		</div><!--<?php
 			/**********************PRODUCTS*************************
 			//Preparing select statement
-			<?php/*
+			$sql = "SELECT * from product WHERE ptag = FEATURED";
+			//Preparing statement for query!
+			if($stmt = mysqli_prepare($db, $sql)){			
+			if(mysqli_stmt_execute($stmt)){
+				mysqli_stmt_store_result($stmt);
+				if(mysqli_stmt_num_rows($stmt) > 0){
+						$num = mysql_num_rows($results);
+						mysqli_fetch_assoc();
+					}
+				}
+			}*/
+			?>-->
 		<div id="products">
 		</div>
 		
