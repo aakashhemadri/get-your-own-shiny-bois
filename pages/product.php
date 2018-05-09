@@ -1,5 +1,6 @@
  <?php
 require '../php/connect.php';
+
 $sql = "SELECT * FROM product";
 $result = $db->query($sql);
 ?>
@@ -7,20 +8,33 @@ $result = $db->query($sql);
 <html>
 
 <head>
-	<title></title>
+	<?php require "../php/header.php";?>
 	<style>
 		div#desc{
 			float: right;
 		}
+		body{
+			font-family: 'Hydeon';
+		}
+		table{
+			border-collapse: collapse;
+			margin-right: 25px;
+			border-style: solid;
+		}
+		img{
+			margin-top: 25px;
+			margin-left: 20px;
+		}
 	</style>
-	<link rel="stylesheet" type="text/css" href="../css/styles.css">
-
 </head>
 
 <body>
-	<img src="../images/slide4.jpg" height="100%" width="50%">
+	<?php
+	require '../php/navbar.php';
+	?>
+	<img src="../images/slide4.jpg" height="50%" width="40%">
 	<div id="desc">
-		<table cellpadding="5px">		
+		<table  cellpadding="10px" border="2px">		
 		<tbody>
 		<?php
 		if ($result->num_rows > 0) 
@@ -29,6 +43,10 @@ $result = $db->query($sql);
 			{
 				if($row['pid'] == 1)
 				{
+					echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2>";
+
+					echo "<h1>" . $row['pprice'] . "</h1><br><br>";
+					echo "<h3>Description</h3>";
 					echo '<tr>'.
 						'<td>'."ID:".'</td>'.
 						'<td>'.$row['pid'].'</td>'.
