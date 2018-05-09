@@ -12,6 +12,7 @@ $result = $db->query($sql);
 	<style>
 		div#desc{
 			float: right;
+			margin-right:300px;
 		}
 		body{
 			font-family: 'Hydeon';
@@ -21,28 +22,32 @@ $result = $db->query($sql);
 			margin-right: 25px;
 			border-style: solid;
 		}
-		img{
+		div#product-image img{
+			float:left;
+			padding-right: 10px;
 			margin-top: 25px;
 			margin-left: 20px;
+			width: 40%;
+			height: 50%;
 		}
 	</style>
 </head>
 
 <body>
 	<?php
+	require "../php/navbar.php";
+
 		if ($result->num_rows > 0) 
 		{
 			while ($row = $result->fetch_assoc())
-			{print('
-	<div id="desc">
-		<table cellpadding="5px">		
-		<tbody>');
-		
-				echo '<img class="product-image" src="data:image/jpeg;base64,'. base64_encode($row['pimage']).'"/>';
+			{	
+				
 				if($row['pid'] == 1)
-				{
+				{	echo '<div id="product-image"><img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/></div>' ;
+					print('<div id="desc">
+					<table cellpadding="5px" border="1px">		
+					<tbody>');	
 					echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2>";
-
 					echo "<h1>" . $row['pprice'] . "</h1><br><br>";
 					echo "<h3>Description</h3>";
 					echo '<tr>'.
@@ -132,7 +137,7 @@ $result = $db->query($sql);
     	}
 				$db->close();
 		?>
-		</body>
+		</tbody>
 	</table>
 	</div>
 	</body>
