@@ -30,17 +30,15 @@ $result = $db->query($sql);
 
 <body>
 	<?php
-	require '../php/navbar.php';
-	?>
-	<img src="../images/slide4.jpg" height="50%" width="40%">
-	<div id="desc">
-		<table  cellpadding="10px" border="2px">		
-		<tbody>
-		<?php
 		if ($result->num_rows > 0) 
 		{
 			while ($row = $result->fetch_assoc())
-			{
+			{print('
+	<div id="desc">
+		<table cellpadding="5px">		
+		<tbody>');
+		
+				echo '<img class="product-image" src="data:image/jpeg;base64,'. base64_encode($row['pimage']).'"/>';
 				if($row['pid'] == 1)
 				{
 					echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2>";
@@ -134,7 +132,7 @@ $result = $db->query($sql);
     	}
 				$db->close();
 		?>
-		</tbody>
+		</body>
 	</table>
 	</div>
 	</body>

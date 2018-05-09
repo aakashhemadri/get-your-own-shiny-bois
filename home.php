@@ -100,8 +100,8 @@ $username = "Guest"
 			<a href="">XIAOMI</a><br>
 			<a href="">OPPO</a><br>
 			<a href="">LG</a>
-		</div><!--<?php
-			/**********************PRODUCTS*************************
+		</div><?php
+			/**********************PRODUCTS*************************/
 			//Preparing select statement
 			$sql = "SELECT * from product WHERE ptag = FEATURED";
 			//Preparing statement for query!
@@ -113,8 +113,8 @@ $username = "Guest"
 						mysqli_fetch_assoc();
 					}
 				}
-			}*/
-			?>-->
+			}
+			?>
 		<div id="products">
 		</div>
 		
