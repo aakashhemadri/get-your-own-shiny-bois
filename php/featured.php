@@ -21,16 +21,10 @@
 	$fproduct = $db->query($sql);
 	echo "<br><br>";
 	if($fproduct->num_rows > 0){
-	
 	while($row = $fproduct->fetch_assoc()){
-	
-		echo '<div id="over">
-				<a><div id="product-image"><img src="data:image/jpeg;base64,'.base64_encode($row["pimage"]).'"/></div></a>';
-		echo "<h4>".$row['pname'].$row['pmodel']."</h4>";
-		echo "<h3>".$row['pprice']."</h3><br><br>
-			</div>
-		";
-		
+		echo "<div id='product-image'><img src='data:image/jpeg;base64,".base64_encode($row['pimage'])."'/></div>";
+		echo "<h2>".$row['pname'].$row['pmodel']." (RAM " . $row['pram'] . ")"."</h2>";
+		echo "<h1>".$row['pprice']."</h1><br><br>";
 	}
 }
 ?>

@@ -13,8 +13,10 @@ print('<nav>
 					<a href="#">Welcome!, '.$username.'</a>
 					<a href="'.$dir.'pages/login.php"><img src="'.$dir.'images/nav/login.jpg" alt="search" height="12px" width="12px" href="'.$dir.'pages/login.php"></a>
 					<a href="'.$dir.'pages/cart.php"><img src="'.$dir.'images/nav/cart.jpg" alt="search" height="14" width="14px"></a>
-					<a><img src="'.$dir.'images/nav/search.jpg" alt="search" height="12px" width="12px"></a>
-					<input type="text" name="" placeholder="Product name">
+					<form method="POST" action="list.php" style="display:inline;">
+						<input type="text" id="searchbox" name="searchbox" placeholder="Search!">
+						<input type="submit" id="search" height="12px" width="12px" value="&#x1F50D"/>
+					</form>
 				</div>
 			</div>
 		</nav>
@@ -31,4 +33,6 @@ print('<nav>
 				</div>
 			</div>
 		</nav>');
+// style="background:url('.$dir.'images/nav/search.jpg) no-repeat;color:white;"
 ?>
+

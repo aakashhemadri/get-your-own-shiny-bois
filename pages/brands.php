@@ -1,4 +1,6 @@
 <?php
+	session_start();
+	$username = $_SESSION['uname'];
 	$brandname = $_GET['tag'];
 	require '../php/connect.php';
 	$sql = 'SELECT * from product WHERE pname="'.$brandname.'"';

@@ -1,4 +1,6 @@
  <?php
+session_start();
+$username = $_SESSION['uname'];
 require '../php/connect.php';
 $product = $_GET['tag'];
 $sql = "SELECT * FROM `product` WHERE pname='$product'";

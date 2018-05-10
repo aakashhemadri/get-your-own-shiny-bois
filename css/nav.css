@@ -39,6 +39,24 @@ nav div#lowerNav a:hover {
     background-color: #ddd;
 }
 
+input#searchbox{
+    outline: none;
+    border: none;
+    margin-top: 8px;
+    border-radius: 4px;
+    background-color: black;
+    text-shadow: none;
+    color: white;
+}
+
+input#search {
+    outline: none;
+    border: none;
+    margin-top: 8px;
+    border-radius: 4px;
+    background-color: black;
+}
+
 /**************************** SIDE NAV ***************************/
 
 div#side{

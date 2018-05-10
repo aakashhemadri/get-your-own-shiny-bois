@@ -9,29 +9,6 @@
 
 	require 'php/connect.php';
 	$hot_product = array("SAMSUNG","APPLE","VIVO","XIAOMI","OPPO","LG");//NEEDS TO PULL FROM DATABASE -- A FEATURE FOR LATER
-    /**********************CART ADDITION*********************
-
-	//Preparing select statement
-	$sql = "SELECT * from cart WHERE ";
-	//Preparing statement for query!
-	if($stmt = mysqli_prepare($db, $sql)){
-		//Binding variables to the prepared statement as parameters!
-		mysqli_stmt_bind_param($stmt, "s");
-	}
-	$username = $_SESSION['username'];
-	/*
-	$g4u_cart = $db->query("SELECT * FROM cart");
-
-	//SETTING CURRENT USER
-		if(isset($_POST['uid']))
-			$username = $_POST['uid'];//After validation
-		else
-			$username = "Guest";
-	//SETTING CART DETAILS BY FETCHING DATABASE INFO
-		$conn = new mysqli("localhost","root","","g4u");
-		$USER_ = $conn->query("SELECT * from 'user' where '$username'");
-		$CART_ = $conn->query("SELECT * from 'cart'");
-	//	$LIST_ = $conn->query("SELECT * from 'list'")*/
 ?>
 
 
