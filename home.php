@@ -5,8 +5,8 @@
 		$_SESSION['username'] = "guest";
 	}
 	require 'php/connect.php';
-
-$username = "Guest"
+	$hot_product = array("SAMSUNG","APPLE","VIVO","XIAOMI","OPPO","LG");//NEEDS TO PULL FROM DATABASE -- A FEATURE FOR LATER
+	$username = "Guest"
 /**********************CART ADDITION*********************
 
 	//Preparing select statement
@@ -44,6 +44,7 @@ $username = "Guest"
 		<script src="scripts/slide.js"></script>
 	</head>
 	<body onload="startTimer();">
+	<div id="container">
 		<nav>
 			<div id="upperNav">
 				<a><img src="images/nav/fb.jpg" alt="search" height="17px" width="17px"></a>
@@ -61,7 +62,7 @@ $username = "Guest"
 		</nav>
 		<nav>
 			<div id="lowerNav">
-				<a href="pages/brands.html">BRANDS</a>
+				<a href="#Brands">BRANDS</a>
 				<a href="#pPremium">PREMIUM</a>
 				<a href="#pLatest">LATEST</a>
 				<a href="#pBudget">BUDGET</a>
@@ -82,44 +83,44 @@ $username = "Guest"
 			<button type="button" onclick="displayNextImage()">Next</button>-->
 			</center>
 		</div>
-		<div id="#pBrands">
-		
+		<div id="side">
+			<a id="title">BRANDS</a><br>
+			<hr style="color:orange;">
+			<?php echo '<a href="pages/brands.php?tag=$hot_product[0]">'.$hot_product[0].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=$hot_product[1]">'.$hot_product[1].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=$hot_product[2]">'.$hot_product[2].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=$hot_product[3]">'.$hot_product[3].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=$hot_product[4]">'.$hot_product[4].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=$hot_product[5]">'.$hot_product[5].'</a>';?><br>
+			<hr style="color:orange;">
 		</div>
-		<div id="#pPremium">
-			
-		</div>
-
-		<div id="bra">
-			BRANDS
-		</div><br>
-
-		<div class="side">
-			<a href="product.php">SAMSUNG</a><br>
-			<a href="">APPLE</a><br>
-			<a href="">VIVO</a><br>
-			<a href="">XIAOMI</a><br>
-			<a href="">OPPO</a><br>
-			<a href="">LG</a>
-		</div><?php
-			/**********************PRODUCTS*************************/
+		<div id="products">
+			<a>Featured products</a>
+			<?php
+			/*** *******************PRODUCTS*************************/
 			//Preparing select statement
-			$sql = "SELECT * from product WHERE ptag = FEATURED";
+			$sql = "SELECT * from `product` WHERE ptag='FEATURED'";
 			//Preparing statement for query!
-			if($stmt = mysqli_prepare($db, $sql)){			
-			if(mysqli_stmt_execute($stmt)){
-				mysqli_stmt_store_result($stmt);
-				if(mysqli_stmt_num_rows($stmt) > 0){
-						$num = mysql_num_rows($results);
-						mysqli_fetch_assoc();
+			$fproduct = $db->query($sql);
+			if($fproduct->num_rows > 0){
+				$i = 0;
+				while($row = $fproduct->fetch_assoc()){
+					if($i < 3){
+					echo '<div id="product-image"><img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/></div>' ;
+					echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2>";
+					echo "<h1>" . $row['pprice'] . "</h1><br><br>";
+					$i++;
 					}
 				}
 			}
 			?>
-		<div id="products">
 		</div>
-		
+	</div>
+		<div>
 		<?php
 			include 'php/footer.php';
 		?>
+		</div>
+	<div>
 	</body>
 </html>

@@ -1,7 +1,7 @@
  <?php
 require '../php/connect.php';
-
-$sql = "SELECT * FROM product";
+$product = $_GET['tag'];
+$sql = "SELECT * FROM `product` WHERE pname='$product'";
 $result = $db->query($sql);
 ?>
 
