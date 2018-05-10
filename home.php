@@ -5,7 +5,7 @@
 		$_SESSION['username'] = "guest";
 	}
 	require 'php/connect.php';
-	$hot_product = array("SAMSUNG","APPLE","VIVO","XIAOMI","OPPO","LG");//NEEDS TO PULL FROM DATABASE -- A FEATURE FOR LATER
+	$hot_product = array("Samsung","APPLE","VIVO","XIAOMI","OPPO","LG");//NEEDS TO PULL FROM DATABASE -- A FEATURE FOR LATER
 	$username = "Guest"
 /**********************CART ADDITION*********************
 
@@ -86,12 +86,12 @@
 		<div id="side">
 			<a id="title">BRANDS</a><br>
 			<hr style="color:orange;">
-			<?php echo '<a href="pages/brands.php?tag=$hot_product[0]">'.$hot_product[0].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=$hot_product[1]">'.$hot_product[1].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=$hot_product[2]">'.$hot_product[2].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=$hot_product[3]">'.$hot_product[3].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=$hot_product[4]">'.$hot_product[4].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=$hot_product[5]">'.$hot_product[5].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[0] . '">'.$hot_product[0].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[1] . '">'.$hot_product[1].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[2] . '">'.$hot_product[2].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[3] . '">'.$hot_product[3].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[4] . '">'.$hot_product[4].'</a>';?><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[5] . '">'.$hot_product[5].'</a>';?><br>
 			<hr style="color:orange;">
 		</div>
 		<div id="products">
@@ -106,9 +106,9 @@
 				$i = 0;
 				while($row = $fproduct->fetch_assoc()){
 					if($i < 3){
-					echo '<div id="product-image"><img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/></div>' ;
-					echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2>";
-					echo "<h1>" . $row['pprice'] . "</h1><br><br>";
+					echo '<div id="product-image"><img src="data:image/jpeg;base64,'.base64_encode($row["pimage"]).'"/></div>' ;
+					echo "<h2>".$row['pname'].$row['pmodel']." (RAM " . $row['pram'] . ")"."</h2>";
+					echo "<h1>".$row['pprice']."</h1><br><br>";
 					$i++;
 					}
 				}
