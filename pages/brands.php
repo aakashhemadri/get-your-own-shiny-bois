@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if(isset($_SESSION['uname'])){
 		$username = $_SESSION['uname'];
 	}
@@ -30,6 +31,11 @@
 		#List{
 			padding-left:30%;
 		}
+
+		a#link{
+			text-decoration: none;
+			color: orange;
+		}
 		hr{
 			width: 75%;
 			color: white;
@@ -50,12 +56,12 @@
 				<div id="main">
 
 				<div id="product-image">
-					<a href="">
+					<a id="link" href="../pages/product.php?prod='.$row['pid'].'">
 						<img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/>
 					</a>
 				</div> 
 
-				<h1>' . $row['pname']."  ".$row['pmodel'] ."</h1> <h2>" . $row['pprice'] . "</h2>";
+				<a id="link" href="../pages/product.php?prod='.$row['pid'].'"><h1>' . $row['pname']."  ".$row['pmodel'] ."</h1></a> <h2>" . $row['pprice'] . "</h2>";
 
 				echo '<h3>Highlights</h3>
 						<div id="List">

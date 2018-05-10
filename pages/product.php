@@ -1,12 +1,13 @@
  <?php
+session_start();
 if(isset($_SESSION['uname'])){
 		$username = $_SESSION['uname'];
 	}
 else
 		$username = "Guest";
 require '../php/connect.php';
-$product = $_GET['tag'];
-$sql = "SELECT * FROM `product` WHERE pname='$product'";
+$product = $_GET['prod'];
+$sql = "SELECT * FROM `product` WHERE pid='$product'";
 $result = $db->query($sql);
 ?>
 
@@ -77,10 +78,7 @@ $result = $db->query($sql);
 		if ($result->num_rows > 0) 
 		{
 			while ($row = $result->fetch_assoc())
-			{	
-				
-				if($row['pid'] == 1)
-				{	
+			{		
 					echo '
 					<div id="page1">
 							<div id="product-image"><img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/>
@@ -155,8 +153,6 @@ $result = $db->query($sql);
 
 	
 					</div>';
-						
-				}
 			}	
 		}
 

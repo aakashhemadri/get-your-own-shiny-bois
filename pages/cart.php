@@ -1,4 +1,5 @@
 <?php
+	session_start();
 	if(isset($_SESSION['uname'])){
 		$username = $_SESSION['uname'];
 	}
@@ -15,6 +16,8 @@
 </head>
 <body>
 	<?php require '../php/navbar.php';?>
+
+	<?php ?>
 
 	<?php require '../php/footer.php';?>
 </body>

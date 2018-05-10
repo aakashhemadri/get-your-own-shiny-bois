@@ -13,7 +13,7 @@ print('<nav>
 					<a href="#">Welcome!, '.$username.'</a>
 					<a href="'.$dir.'pages/login.php"><img src="'.$dir.'images/nav/login.jpg" alt="search" height="12px" width="12px" href="'.$dir.'pages/login.php"></a>
 					<a href="'.$dir.'pages/cart.php"><img src="'.$dir.'images/nav/cart.jpg" alt="search" height="14" width="14px"></a>
-					<form method="POST" action="list.php" style="display:inline;">
+					<form method="POST" action="'.$dir.'pages/list.php" style="display:inline;">
 						<input type="text" id="searchbox" name="searchbox" placeholder="Search!">
 						<input type="submit" id="search" height="12px" width="12px" value="&#x1F50D"/>
 					</form>
