@@ -1,6 +1,5 @@
 <?php
 print('
-	<body onload="startTimer();">
 		<nav>
 			<div id="upperNav">
 				<a><img src="../images/nav/fb.jpg" alt="search" height="17px" width="17px"></a>
