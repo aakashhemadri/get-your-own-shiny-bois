@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2018 at 08:15 PM
+-- Generation Time: May 10, 2018 at 11:23 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -79,7 +79,12 @@ INSERT INTO `product` (`pid`, `pmodel`, `pname`, `pdesc`, `pdimension`, `pweight
 (7, 'OnePlus 5T', 'OnePlus', '', '75 x156.1 x7.3 mm', '162 g', 'Qualcomm Snapdragon 835 MSM8998', '4 X2.45 GHz kryo 385,4x1.9 GHz kryo,Cores: 8', 'Qualcomm Adreno 540,710 MHz', '6 GB,8 GB,1866 MHz', '64 GB,128 GB', 'to be filled', '6.0in,Optic AMOLED,1080 x 2160 pixels,24 bit', '3300 mAh,Li-Polymer', 'Android 7.1.1 Nougat', '4608 x 3456 pixels , 3840 x 2160 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5Ghz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct', '5.0', '2.0,USB Tyoe-C', 'PREMIUM (Entry)', '', '$509.99'),
 (8, 'iPhone 8', 'Apple', 'to be filled', '67.3 x 138.4 x 7.3 mm', '148 g', 'Apple A11 Bionic APL1W72', '2x Monsoon, 4x Mistral , 2100 MHz ,Cores :6', 'to be filled', '2 GB', '64 GB,256 GB', 'to be filled', '4.7 in,IPS,750 x 1334 pixels,24 bit', '1821 mAh,Li-Ion ', 'iOS 11', '4032 x 3024 pixel , 3840 x 2160 pixel, 60 fps', 'Nano-SIM', 'a,b,g,n,n,5GHz,ac,Dual band,Wi-Fi Hotspot', '5.0', '2.0', 'PREMIUM', '', '$688.00'),
 (9, 'Moto G5s Plus', 'Motorola', '', '76.2 x 153.5 x 9.5 mm', '170 g', 'Qualcomm Snapdragon 625 MSM8953', 'ARM Cortex-A53,2000 MHz', 'Qualcommm Adreno 506,650 MHz', '3 GB,4 GB,933 MHz', '32 GB,64 GB', 'microSD,microSDHC,microSDXC', '5.5 in,IPS,1080 x 1920 pixel,24 bit', '3000 mAh,Li-Ion', 'Android 7,1 Nougat', '4160 x 3120 pixels,3480 x 2160 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5GHz,Dual band,Wi-F- Hotspot,Wi-Fi Direct', '4.1', '2.0,Micro USB', 'BUDGET', '', '$245.00'),
-(10, 'Redmi Note 4MSM8953', 'Xiaomi', '', '76 x 151 x 8.45 mm', '165 g', 'Qualcomm Snapdragon 625 MSM8953', 'ARM Cortex-A53,2000 MHz,Cores:8', 'Qualcomm Adreno 506', '2 GB,3 GB,4 GB,933 MHz', '32 GB,64 GB', 'microSD,microSDHC,microSDXC', '5.5 in,IPS,1080 x 1920 pixels,24 bit', '4100 mAh,Li-Polymer', 'MIUI V8 (Marshmallow)', '4160 x 3120 pixels,1920 x 1080 pixels,30 fps', 'Micro-SIM,Nano-SIM/microSD', 'a,b,g,n,n 5GHz,Dual band,Wi-Fi Hotspot,Wi-Fi Direct', '4.1', '2.0,Micro USB', 'BUDGET', '', '$145.99');
+(10, 'Redmi Note 4MSM8953', 'Xiaomi', '', '76 x 151 x 8.45 mm', '165 g', 'Qualcomm Snapdragon 625 MSM8953', 'ARM Cortex-A53,2000 MHz,Cores:8', 'Qualcomm Adreno 506', '2 GB,3 GB,4 GB,933 MHz', '32 GB,64 GB', 'microSD,microSDHC,microSDXC', '5.5 in,IPS,1080 x 1920 pixels,24 bit', '4100 mAh,Li-Polymer', 'MIUI V8 (Marshmallow)', '4160 x 3120 pixels,1920 x 1080 pixels,30 fps', 'Micro-SIM,Nano-SIM/microSD', 'a,b,g,n,n 5GHz,Dual band,Wi-Fi Hotspot,Wi-Fi Direct', '4.1', '2.0,Micro USB', 'BUDGET', '', '$145.99'),
+(11, 'A3', 'Oppo', '', '75.3 x 156 x 7.8mm', '159g', 'Media Tek Helio P60 MT6771', '4x 2.0 GHz ARM Cortex-A73,4x 2.0 GHz ARM Cortex-A53,Cores:8', 'ARM Mali-G72 MP3,800 MHz,Cores: 3', '4 GB, 1800 MHz', '128 GB', 'microSD,microSDHC,microSDXC', '6.2 in,IPS, 1080 x 2280 pixels,24 bit', '3400 mAh,Li-Polymer', 'ColorOS 5.0(Android 8.1 Oreo)', '4608 x 3456 pixels, 1920 x 2280 pixels,24 bit', 'Nano-SIM', 'a,b,g,n,n, 5GHz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct', '4.2', '2.0,Micro USB ', 'CAMERA', '', '$312'),
+(12, 'A83', 'Oppo', '', '73.1 x 150.5 x 7.7mm', '143g', 'MediaTek Helio P23(MT6763T)', '4x 2.3 GHz ARM Cortex-A53,4x 1.65 GHz ARM Cortex-A53,Cores:8', 'ARM Mali-G71 MP2,770 MHz,Cores: 2', '4 GB, 1600 MHz', '64 GB', 'microSD,microSDHC,microSDXC', '5.7 in,IPS, 720 x 1440 pixels,24 bit', '3180 mAh,Li-Polymer', 'ColorOS 3.2(Android 7.1.1 Nougat)', '4160 x 3120 pixels, 1920 x 1080 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5GHz,Dual band,Wi-Fi Hotspot,Wi-Fi Direct', '4.2', '2.0,Micro USB ', 'CAMERA', '', '$400'),
+(13, 'F7', 'Oppo', '', '75.3 x 156 x 7.8mm', '158g', 'MediaTek Helio P60 MT6771', '4x 2.0 GHz ARM Cortex-A73,4x 2.0 GHz ARM Cortex-A53,Cores:8', 'ARM Mali-G72 MP3,800 MHz,Cores: 3', '4 GB,6 GB, 1800 MHz', '64 GB,128 GB', 'microSD,microSDHC,microSDXC', '6.23 in,IPS, 1080 x 2280 pixels,24 bit', '3400 mAh,Li-Polymer', 'ColorOS 5.0(Android 8.1 Oreo)', '4608 x 3456 pixels, 1920 x 1080 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5GHz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct', '4.2', '2.0,Micro USB ', 'CAMERA', '', '$355'),
+(14, 'Mi 6X', 'Xiaomi', '', '75.4 x 158.7 x 7.3mm', '168g', 'Qualcomm Snapdragon 660 MSM8976 Plus', '4x 2.2 GHz Kryo,4x 1.84 GHz Kryo,Cores:8', 'Qualcomm Adreno 512,650 MHz', '4 GB,6 GB, 1866 MHz', '64 GB,128 GB', 'microSD,microSDHC,microSDXC', '5.99 in,IPS, 1080 x 2160 pixels,24 bit', '3010 mAh,Li-Polymer', 'MIUI V9.5(Android 8.1 Oreo)', '4000 x 3000 pixels, 3840 x 2160 pixels,30 fps', 'Nano-SIM,Nano-SIM/microSD', 'a,b,g,n,n 5GHz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct,Wi-Fi Display', '5.0', '2.0,USB Type-C ', 'BUDGET', '', '$305.99'),
+(15, 'Mi MIX 2S', 'Xiaomi', '', '74.9 x 150.86 x 8.1mm', '189g', 'Qualcomm Snapdragon 845', '4x 2.8 GHz Kryo 385,4x 1.8 GHz Kryo 385,Cores:8', 'Qualcomm Adreno 630', '6 GB,8 GB, 1866 MHz', '64 GB,128 GB,256 GB', 'microSD,microSDHC,microSDXC', '5.99 in,IPS, 1080 x 2160 pixels,24 bit', '3400 mAh,Li-Polymer', 'MIUI V9.5(Android 8.0 Oreo)', '4000 x 3000 pixels, 3840 x 2160 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5GHz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct,Wi-Fi Display', '5.0', '2.0,USB Type-C ', 'BUDGET', '', '$339.99');
 
 -- --------------------------------------------------------
 
@@ -138,7 +143,7 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `user`
