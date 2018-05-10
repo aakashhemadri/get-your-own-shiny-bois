@@ -10,12 +10,10 @@ $result = $db->query($sql);
 <head>
 	<?php require "../php/header.php";?>
 	<style>
-		div#desc{
-			float: right;
-			margin-right:300px;
-		}
 		body{
-			font-family: 'Hydeon';
+			font-family: 'Verdana';
+			width: 100%;
+			overflow: hidden;
 		}
 		table{
 			border-collapse: collapse;
@@ -27,9 +25,46 @@ $result = $db->query($sql);
 			padding-right: 10px;
 			margin-top: 25px;
 			margin-left: 20px;
-			width: 250px;
-			height: 250px;
+			width: 400px;
+			height: 390px;
+			padding-right: 5em;
 		}
+
+		#list{
+			list-style-type: square;
+		}
+		#Buy,#Cart,#More{
+			width: 15%;
+			height: 7%;
+			background-color: #E8943A;
+			outline: none;
+			border: none;
+			border-radius: 1cm;
+		}
+
+		#Buy{
+			background-color: #E5491F;
+		}
+
+		#More{
+			background-color: 059840;
+		}
+	
+		#page1{
+			width: 100%;
+			float: left;
+		}
+		
+		#page2{
+			width: 100%;
+		}
+		
+		#list1,#list2,#list3,#list4{
+			float:left;
+			width:40%;
+			margin-left: 10%;
+		}
+	
 	</style>
 </head>
 
@@ -43,93 +78,84 @@ $result = $db->query($sql);
 			{	
 				
 				if($row['pid'] == 1)
-				{	echo '<div id="product-image"><img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/></div>' ;
-					print('<div id="desc">
-					<table cellpadding="5px" border="1px">		
-					<tbody>');	
-					echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2>";
-					echo "<h1>" . $row['pprice'] . "</h1><br><br>";
-				
-					echo "<h3>Description</h3>";
-					echo '<tr>'.
-						'<td>'."ID:".'</td>'.
-						'<td>'.$row['pid'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."NAME".'</td>'.
-						'<td>'.$row['pname'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."MODEL".'</td>'.
-						'<td>'.$row['pmodel'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."DIMENSION".'</td>'.
-						'<td>'.$row['pdimension'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."WEIGHT".'</td>'.
-						'<td>'.$row['pweight'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."CPU".'</td>'.
-						'<td>'.$row['pcpu'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."GPU".'</td>'.
-						'<td>'.$row['pgpu'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."RAM".'</td>'.
-						'<td>'.$row['pram'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."DISPLAY".'</td>'.
-						'<td>'.$row['pdisplay'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."STORAGE".'</td>'.
-						'<td>'.$row['pstorage'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."MEMORY".'</td>'.
-						'<td>'.$row['pmemory'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."OS".'</td>'.
-						'<td>'.$row['pos'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."BATTERY".'</td>'.
-						'<td>'.$row['pbattery'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."CAMERA".'</td>'.
-						'<td>'.$row['pcamera'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."SIM".'</td>'.
-						'<td>'.$row['psim'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."WIFI".'</td>'.
-						'<td>'.$row['pwifi'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."BLUETOOTH".'</td>'.
-						'<td>'.$row['pbluetooth'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."USB".'</td>'.
-						'<td>'.$row['pusb'].'</td>'.
-					 '</tr>'.
-					 '<tr>'.
-						'<td>'."PRICE".'</td>'.
-						'<td>'.$row['pprice'].'</td>'.
-					 '</tr>';
-				}
+				{	
+					echo '
+					<div id="page1">
+							<div id="product-image"><img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/>
+							</div>' ;
+						
+						echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2> <h1>" . $row['pprice'] . "</h1>";
 
-			}
+						echo '<h2>Highlights</h2>
+
+						<ul id="top">
+							<li>' . $row['pstorage'] . '</li><br>
+							<li>' . $row['pdisplay'] . '</li><br>
+							<li>' . $row['pcamera']  . '</li><br>
+							<li>' . $row['pbattery'] . '</li><br>
+							<li>' . $row['pram']   . '</li>
+						</ul>';
+
+						echo '<input type="button" id="Buy" value="Buy">'."&nbsp;&nbsp;&nbsp;&nbsp;" .
+						 '<input type="button" id="Cart" value="Add to cart">&nbsp;&nbsp;&nbsp;&nbsp;
+
+						 <a href="#list1" style="text-decoration:none;">
+						  	<input type="button" id="More" value="More">
+						 </a>
+
+						 <br><br><br><br><br>
+						
+							<h1 style="margin-left:40%;">Description
+							</h1>
+
+						<div id="list1">
+					 		<h2>Basics</h2>
+	
+							<ul>
+								<li>' . $row['pstorage'] . '</li><br>
+								<li>' . $row['pdisplay'] . '</li><br>
+								<li>' . $row['pcamera']  . '</li><br>
+								<li>' . $row['pbattery'] . '</li>	
+							</ul>
+						</div>
+		
+						<div id="list2">
+							<h2>Technical</h2>
+		
+							<ul>
+								<li>' . $row['pgpu'] . '</li><br>
+								<li>' . $row['pos']  . '</li><br>
+								<li>' . $row['pram'] . '</li><br>
+								<li>' . $row['psoc'] . '</li>
+							</ul>
+						</div>
+
+						<div id="list3">
+							<h2>Device Info</h2>
+	
+							<ul>
+								<li>' . $row['pos'] . '</li><br>
+								<li>' . $row['pweight'] . '</li><br>
+								<li>' . $row['pdimension']  . '</li><br>
+								<li>' . $row['psim'] . '</li><br>
+							</ul>
+						</div>
+				
+						<div id="list4">
+							<h2>Additional Info</h2>
+	
+							<ul>
+								<li>' . $row['pbluetooth'] . '</li><br>
+								<li>' . $row['pusb']  . '</li><br>
+								<li>' . $row['pprice'] . '</li><br>
+							</ul>
+						</div>
+
+	
+					</div>';
+						
+				}
+			}	
 		}
 
 		else 
@@ -138,8 +164,6 @@ $result = $db->query($sql);
     	}
 				$db->close();
 		?>
-		</tbody>
-	</table>
 	</div>
 	</body>
 
