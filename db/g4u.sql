@@ -2,8 +2,8 @@
 -- version 4.8.0
 -- https://www.phpmyadmin.net/
 --
--- Host: 127.0.0.1
--- Generation Time: May 11, 2018 at 06:35 AM
+-- Host: localhost
+-- Generation Time: May 10, 2018 at 10:22 PM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -29,7 +29,9 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `cart` (
+  `username` varchar(32) NOT NULL,
   `cid` int(11) NOT NULL,
+  `pid` int(11) NOT NULL,
   `pmodel` varchar(20) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
