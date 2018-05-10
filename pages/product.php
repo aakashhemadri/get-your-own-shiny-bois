@@ -15,11 +15,6 @@ $result = $db->query($sql);
 			width: 100%;
 			overflow: hidden;
 		}
-		table{
-			border-collapse: collapse;
-			margin-right: 25px;
-			border-style: solid;
-		}
 		div#product-image img{
 			float:left;
 			padding-right: 10px;
@@ -28,8 +23,10 @@ $result = $db->query($sql);
 			width: 400px;
 			height: 390px;
 			padding-right: 5em;
+		}	
+		#top{
+			margin-left: 40%;
 		}
-
 		#list{
 			list-style-type: square;
 		}
@@ -64,7 +61,7 @@ $result = $db->query($sql);
 			width:40%;
 			margin-left: 10%;
 		}
-	
+
 	</style>
 </head>
 
@@ -84,9 +81,9 @@ $result = $db->query($sql);
 							<div id="product-image"><img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/>
 							</div>' ;
 						
-						echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2> <h1>" . $row['pprice'] . "</h1>";
+						echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2> <h3>" . $row['pprice'] . "</h3>";
 
-						echo '<h2>Highlights</h2>
+						echo '<h4>Highlights</h4>
 
 						<ul id="top">
 							<li>' . $row['pstorage'] . '</li><br>
@@ -103,7 +100,7 @@ $result = $db->query($sql);
 						  	<input type="button" id="More" value="More">
 						 </a>
 
-						 <br><br><br><br><br>
+						 <br><br><br><br><br><br>
 						
 							<h1 style="margin-left:40%;">Description
 							</h1>
