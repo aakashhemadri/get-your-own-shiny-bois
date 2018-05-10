@@ -15,6 +15,12 @@ $result = $db->query($sql);
 
 <head>
 	<?php require "../php/header.php";?>
+	<?php 
+	if(isset($_GET['atc'])){
+		$message = $_GET['atc'];
+			echo "<script type='text/javascript'>alert('".$message."');</script>";
+	}
+	?>
 	<style>
 		body{
 			font-family: 'Verdana';
@@ -97,7 +103,7 @@ $result = $db->query($sql);
 						</ul>';
 
 						echo '<input type="button" id="Buy" value="Buy">'."&nbsp;&nbsp;&nbsp;&nbsp;" .
-						 '<input type="button" id="Cart" value="Add to cart">&nbsp;&nbsp;&nbsp;&nbsp;
+						 '<a href="../php/addtocart.php?pid='.$product.'"><input type="button" id="Cart" value="Add to cart"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 
 						 <a href="#list1" style="text-decoration:none;">
 						  	<input type="button" id="More" value="More">

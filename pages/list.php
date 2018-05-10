@@ -15,6 +15,8 @@ require '../php/connect.php';
 		$sql = "SELECT * FROM `product` WHERE pname LIKE '%$query%' OR pmodel LIKE '%$query%' OR ptag LIKE '%$query%' OR pdesc LIKE '%$query%' OR pdimension LIKE '%$query%' OR pweight LIKE '%$query%' OR psoc LIKE '%$query%' OR pcpu LIKE '%$query%' OR pgpu LIKE '%$query%' OR pram LIKE '%$query%' OR pstorage LIKE '%$query%' OR pmemory LIKE '%$query%' OR pdisplay LIKE '%$query%' OR pos LIKE '%$query%' OR pcamera LIKE '%$query%' OR psim LIKE '%$query%' OR pwifi LIKE '%$query%' OR pbluetooth LIKE '%$query%' OR pusb LIKE '%$query%' OR ptag LIKE '%$query%'";
 	}
 	$result = $db->query($sql);
+
+
 ?>
 <!DOCTYPE html>
 <html>
