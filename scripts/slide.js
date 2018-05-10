@@ -1,6 +1,6 @@
  var images = "images/slide",
  currentIndex = 1;
- numberOfImages = 3;
+ numberOfImages = 8;
  startIndecurrentIndex = 1;
  function displayNecurrentIndextImage() {
      currentIndex = (currentIndex == numberOfImages) ? startIndecurrentIndex : currentIndex + 1;
