@@ -1,6 +1,9 @@
 <?php
-	session_start();
-	$username = $_SESSION['uname'];
+	if(isset($_SESSION['uname'])){
+		$username = $_SESSION['uname'];
+	}
+	else
+		$username = "Guest";
 	$brandname = $_GET['tag'];
 	require '../php/connect.php';
 	$sql = 'SELECT * from product WHERE pname="'.$brandname.'"';

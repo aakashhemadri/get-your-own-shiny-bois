@@ -72,3 +72,14 @@ footer a {
     text-decoration: none;
     color: red;
 }
+
+/*************************** FEATURED ************************************/
+#product-image img{
+            padding:1em;
+            width: 100px;
+            height: 100px;
+}
+#over{
+            float:left;
+            padding-right: 1px;
+}
