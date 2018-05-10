@@ -1,13 +1,15 @@
 <?php
-	//error_reporting(0);
+	//error_reporting(0);S
 	session_start();
-	if(!isset($_SESSION['username']) || empty($_SESSION['username'])){
-		$_SESSION['username'] = "guest";
+	if(isset($_SESSION['uname'])){
+		$username = $_SESSION['uname'];
 	}
+	else
+		$username = "Guest";
+
 	require 'php/connect.php';
-	$hot_product = array("Samsung","APPLE","VIVO","XIAOMI","OPPO","LG");//NEEDS TO PULL FROM DATABASE -- A FEATURE FOR LATER
-	$username = "Guest"
-/**********************CART ADDITION*********************
+	$hot_product = array("SAMSUNG","APPLE","VIVO","XIAOMI","OPPO","LG");//NEEDS TO PULL FROM DATABASE -- A FEATURE FOR LATER
+    /**********************CART ADDITION*********************
 
 	//Preparing select statement
 	$sql = "SELECT * from cart WHERE ";
@@ -45,43 +47,9 @@
 	</head>
 	<body onload="startTimer();">
 	<div id="container">
-		<nav>
-			<div id="upperNav">
-				<a><img src="images/nav/fb.jpg" alt="search" height="17px" width="17px"></a>
-				<a><img src="images/nav/twitter.jpg" alt="search" height="17px" width="17px"></a>
-				<a><img src="images/nav/gplus.jpg" alt="search" height="13px" width="13px"></a>
-				<a><img src="images/nav/insta.jpg" alt="search" height="13px" width="13px"></a>
-				<div style="float:right;margin-right: 10px;">
-					<a href="#"><?php echo "Welcome!, $username "?></a>
-					<a href="pages/login.php"><img src="images/nav/login.jpg" alt="search" height="12px" width="12px" href="pages/login.php"></a>
-					<a href="pages/cart.php"><img src="images/nav/cart.jpg" alt="search" height="14" width="14px"></a>
-					<a><img src="images/nav/search.jpg" alt="search" height="12px" width="12px"></a>
-					<input type="text" name="" placeholder="Product name">
-				</div>
-			</div>
-		</nav>
-		<nav>
-			<div id="lowerNav">
-				<a href="#Brands">BRANDS</a>
-				<a href="#pPremium">PREMIUM</a>
-				<a href="#pLatest">LATEST</a>
-				<a href="#pBudget">BUDGET</a>
-				<a href="pCamera">CAMERA</a>
-				<a href="pDev">DEV</a>
-				<a href="pPrice">PRICE</a>
-				<div style="float:right;margin-right: 10px;">
-					<a href="pContact">CONTACT</a>
-					<a href="pService">SERVICE</a>
-					<a href="pages/about.php">ABOUT</a>
-				</div>
-			</div>
-		</nav>
+		<?php require 'php/navbar.php'; ?>
 		<div><!--Pictures needs replacing! This is not redundant code-->
 			<img id='img' src="images/slide1.jpg" alt="image" width="100%">
-			<center>
-			<!--<button type="button" onclick="displayPreviousImage()">Previous</button>&nbsp;&nbsp;&nbsp;
-			<button type="button" onclick="displayNextImage()">Next</button>-->
-			</center>
 		</div>
 		<div id="side">
 			<a id="title">BRANDS</a><br>
@@ -96,30 +64,11 @@
 		</div>
 		<div id="products">
 			<a>Featured products</a>
-			<?php
-			/*** *******************PRODUCTS*************************/
-			//Preparing select statement
-			$sql = "SELECT * from `product` WHERE ptag='FEATURED'";
-			//Preparing statement for query!
-			$fproduct = $db->query($sql);
-			if($fproduct->num_rows > 0){
-				$i = 0;
-				while($row = $fproduct->fetch_assoc()){
-					if($i < 3){
-					echo '<div id="product-image"><img src="data:image/jpeg;base64,'.base64_encode($row["pimage"]).'"/></div>' ;
-					echo "<h2>".$row['pname'].$row['pmodel']." (RAM " . $row['pram'] . ")"."</h2>";
-					echo "<h1>".$row['pprice']."</h1><br><br>";
-					$i++;
-					}
-				}
-			}
-			?>
+			<?php require "php/featured.php"; ?>
 		</div>
 	</div>
 		<div>
-		<?php
-			include 'php/footer.php';
-		?>
+		<?php include 'php/footer.php';?>
 		</div>
 	<div>
 	</body>
