@@ -27,8 +27,8 @@ $result = $db->query($sql);
 			padding-right: 10px;
 			margin-top: 25px;
 			margin-left: 20px;
-			width: 40%;
-			height: 50%;
+			width: 250px;
+			height: 250px;
 		}
 	</style>
 </head>
@@ -49,6 +49,7 @@ $result = $db->query($sql);
 					<tbody>');	
 					echo "<h2>" . $row['pname']."  ".$row['pmodel'] . " (RAM " . $row['pram'] . ")"."</h2>";
 					echo "<h1>" . $row['pprice'] . "</h1><br><br>";
+				
 					echo "<h3>Description</h3>";
 					echo '<tr>'.
 						'<td>'."ID:".'</td>'.
