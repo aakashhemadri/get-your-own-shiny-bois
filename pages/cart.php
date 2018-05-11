@@ -1,6 +1,9 @@
 <?php
-	session_start();
-	$username = $_SESSION['uname'];
+	if(isset($_SESSION['uname'])){
+		$username = $_SESSION['uname'];
+	}
+	else
+		$username = "Guest";
 	require '../php/connect.php';
 	$sql = "SELECT * from cart WHERE username=$username";
 	$result = $db->query($sql);
