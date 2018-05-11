@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2018 at 11:23 AM
+-- Generation Time: May 11, 2018 at 05:48 AM
 -- Server version: 10.1.31-MariaDB
 -- PHP Version: 7.2.4
 
@@ -84,7 +84,13 @@ INSERT INTO `product` (`pid`, `pmodel`, `pname`, `pdesc`, `pdimension`, `pweight
 (12, 'A83', 'Oppo', '', '73.1 x 150.5 x 7.7mm', '143g', 'MediaTek Helio P23(MT6763T)', '4x 2.3 GHz ARM Cortex-A53,4x 1.65 GHz ARM Cortex-A53,Cores:8', 'ARM Mali-G71 MP2,770 MHz,Cores: 2', '4 GB, 1600 MHz', '64 GB', 'microSD,microSDHC,microSDXC', '5.7 in,IPS, 720 x 1440 pixels,24 bit', '3180 mAh,Li-Polymer', 'ColorOS 3.2(Android 7.1.1 Nougat)', '4160 x 3120 pixels, 1920 x 1080 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5GHz,Dual band,Wi-Fi Hotspot,Wi-Fi Direct', '4.2', '2.0,Micro USB ', 'CAMERA', '', '$400'),
 (13, 'F7', 'Oppo', '', '75.3 x 156 x 7.8mm', '158g', 'MediaTek Helio P60 MT6771', '4x 2.0 GHz ARM Cortex-A73,4x 2.0 GHz ARM Cortex-A53,Cores:8', 'ARM Mali-G72 MP3,800 MHz,Cores: 3', '4 GB,6 GB, 1800 MHz', '64 GB,128 GB', 'microSD,microSDHC,microSDXC', '6.23 in,IPS, 1080 x 2280 pixels,24 bit', '3400 mAh,Li-Polymer', 'ColorOS 5.0(Android 8.1 Oreo)', '4608 x 3456 pixels, 1920 x 1080 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5GHz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct', '4.2', '2.0,Micro USB ', 'CAMERA', '', '$355'),
 (14, 'Mi 6X', 'Xiaomi', '', '75.4 x 158.7 x 7.3mm', '168g', 'Qualcomm Snapdragon 660 MSM8976 Plus', '4x 2.2 GHz Kryo,4x 1.84 GHz Kryo,Cores:8', 'Qualcomm Adreno 512,650 MHz', '4 GB,6 GB, 1866 MHz', '64 GB,128 GB', 'microSD,microSDHC,microSDXC', '5.99 in,IPS, 1080 x 2160 pixels,24 bit', '3010 mAh,Li-Polymer', 'MIUI V9.5(Android 8.1 Oreo)', '4000 x 3000 pixels, 3840 x 2160 pixels,30 fps', 'Nano-SIM,Nano-SIM/microSD', 'a,b,g,n,n 5GHz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct,Wi-Fi Display', '5.0', '2.0,USB Type-C ', 'BUDGET', '', '$305.99'),
-(15, 'Mi MIX 2S', 'Xiaomi', '', '74.9 x 150.86 x 8.1mm', '189g', 'Qualcomm Snapdragon 845', '4x 2.8 GHz Kryo 385,4x 1.8 GHz Kryo 385,Cores:8', 'Qualcomm Adreno 630', '6 GB,8 GB, 1866 MHz', '64 GB,128 GB,256 GB', 'microSD,microSDHC,microSDXC', '5.99 in,IPS, 1080 x 2160 pixels,24 bit', '3400 mAh,Li-Polymer', 'MIUI V9.5(Android 8.0 Oreo)', '4000 x 3000 pixels, 3840 x 2160 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5GHz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct,Wi-Fi Display', '5.0', '2.0,USB Type-C ', 'BUDGET', '', '$339.99');
+(15, 'Mi MIX 2S', 'Xiaomi', '', '74.9 x 150.86 x 8.1mm', '189g', 'Qualcomm Snapdragon 845', '4x 2.8 GHz Kryo 385,4x 1.8 GHz Kryo 385,Cores:8', 'Qualcomm Adreno 630', '6 GB,8 GB, 1866 MHz', '64 GB,128 GB,256 GB', 'microSD,microSDHC,microSDXC', '5.99 in,IPS, 1080 x 2160 pixels,24 bit', '3400 mAh,Li-Polymer', 'MIUI V9.5(Android 8.0 Oreo)', '4000 x 3000 pixels, 3840 x 2160 pixels,30 fps', 'Nano-SIM', 'a,b,g,n,n 5GHz,ac,Dual band,Wi-Fi Hotspot,Wi-Fi Direct,Wi-Fi Display', '5.0', '2.0,USB Type-C ', 'BUDGET', '', '$339.99'),
+(16, 'Q6+', 'LG', '', '69.3 x 142.5 x 8.1 mm', '149 g', 'Qualcomm Snapdragon 435 MSM8940', '4x 1.4 GHz ARM Cortex-A53, 4x 1.1 GHz ARM Cortex-A53,Cores:8', ' Qualcomm Adreno 505', '4 GB, 800 MHz', '64 GB', 'microSD, microSDHC, microSDXC', '5.5 in, IPS, 1080 x 2160 pixels, 24 bit', ' 3000 mAh, Li-Ion', 'Android 7.1.1 Nougat', '4160 x 3120 pixels, 1920 x 1080 pixels, 30 fps', 'Nano-SIM', 'b, g, n, Wi-Fi Hotspot, Wi-Fi Direct', '4.2', ' 2.0, Micro USB', 'FEATURED', '', '$228.99'),
+(17, 'V30', 'LG', '', '75.4 x 151.7 x 7.3 mm', '158 g', 'Qualcomm Snapdragon 835 MSM8998', '4x 2.45 GHz Kryo, 4x 1.9 GHz Kryo,Cores:8', 'Qualcomm Adreno 540, 710 MHz', '4 GB, 1866 MHz', ' 64 GB', ' microSD, microSDHC, microSDXC', '6 in, P-OLED, 1440 x 2880 pixels, 24 bit', '3300 mAh, Li-Polymer', 'Android 7.1.2 Nougat', '4656 x 3492 pixels, 3840 x 2160 pixels, 30 fps', 'Nano-SIM', 'a, b, g, n, n 5GHz, ac, Dual band, Wi-Fi Hotspot, Wi-Fi Direct', ' 5.0', '3.1, USB Type-C', 'FEATURED', '', '$454.99'),
+(18, 'G7 ThinQ', 'LG', '', '71.9 x 153.2 x 7.9 mm', '162 g', 'Qualcomm Snapdragon 845', '2.8 GHz Kryo 385, 4x 1.8 GHz Kryo 385,Cores:8', 'Qualcomm Adreno 630', '4 GB, 6 GB, 1866 MHz', '64 GB, 128 GB', 'microSD, microSDHC, microSDXC', '6.1 in, RGBW IPS, 1440 x 3120 pixels, 24 bit', '3000 mAh, Li-Polymer', 'Android 8.0 Oreo', '4608 x 3456 pixels, 3840 x 2160 pixels, 30 fps', 'Nano-SIM', 'a, b, g, n, n 5GHz, ac, Dual band, Wi-Fi Hotspot, Wi-Fi Direct', '5.0', '3.1, USB Type', 'FEATURED', '', '$1099'),
+(19, 'V5s', 'Vivo', '', '75.5 x 153.8 x 7.55 mm', '154 g', 'MediaTek MT6750', ' 4x 1.5 GHz ARM Cortex-A53, 4x 1.0 GHz ARM Cortex-A53,Core:8', 'ARM Mali-T860 MP2, 520 MHz', '4 GB, 667 MHz', '64 GB', 'microSD, microSDHC, microSDXC', ' 5.5 in, IPS, 720 x 1280 pixels, 24 bit', '3000 mAh, Li-Ion', 'Funtouch 3.0 OS (Android 6.0 Marshmallow)', '4160 x 3120 pixels, 1920 x 1080 pixels, 30 fps', 'Micro-SIM, Nano-SIM / microSD', 'b, g, n, Wi-Fi Hotspot, Wi-Fi Direct', '4.1', '2.0, Micro USB', 'CAMERA', '', '$339'),
+(20, 'V9', 'Vivo', '', '75.03 x 154.81 x 7.89 mm', '150 g', 'Qualcomm Snapdragon 626 MSM8953 Pro', 'ARM Cortex-A53, 2200 MHz,Cores:8', 'Qualcomm Adreno 506', '4 GB, 933 MHz', '64 GB', 'microSD, microSDHC, microSDXC', '6.3 in, IPS, 1080 x 2280 pixels, 24 bit', '3260 mAh, Li-Polymer', 'Funtouch 4.0 OS (Android 8.1 Oreo)', ' 4608 x 3456 pixels, 3840 x 2160 pixels, 30 fps', 'Nano-SIM', ' b, g, n, n 5GHz, Dual band, Wi-Fi Hotspot, Wi-Fi Direct', ' 4.2', '2.0, Micro USB', 'CAMERA', '', ''),
+(21, 'V9s', 'Vivo', '', '74.2 x 152.6 x 6.99 mm', '155 g', 'Qualcomm Snapdragon 652 MSM8976', '4x 1.8 GHz ARM Cortex-A72, 4x 1.4 GHz ARM Cortex-A53,Cores:8', 'Qualcomm Adreno 510, 550 MHz', '4 GB, 933 MHz', '64 GB', 'Micro-SIM,Nano-SIM / microSD', '5.5 in, Super AMOLED, 1080 x 1920 pixels, 24 bit', '3320 mAh, Li-Polymer', 'Funtouch 3.1 OS (Android 7.1.1 Nougat)', '4608 x 3456 pixels, 1920 x 1080 pixels, 30 fps', 'Nano-SIM', ' a, b, g, n, n 5GHz, ac, Dual band, Wi-Fi Hotspot, Wi-Fi Direct', '4.2', '2.0, Micro USB', 'CAMERA', '', '$419');
 
 -- --------------------------------------------------------
 
@@ -143,13 +149,13 @@ ALTER TABLE `cart`
 -- AUTO_INCREMENT for table `product`
 --
 ALTER TABLE `product`
-  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `pid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `uid` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
