@@ -42,7 +42,7 @@ nav div#lowerNav a:hover {
 input#searchbox{
     outline: none;
     border: none;
-    margin-top: 8px;
+    margin-top: 10px;
     border-radius: 4px;
     background-color: black;
     text-shadow: none;
@@ -52,7 +52,7 @@ input#searchbox{
 input#search {
     outline: none;
     border: none;
-    margin-top: 8px;
+    margin-top: 10px;
     border-radius: 4px;
     background-color: black;
 }
