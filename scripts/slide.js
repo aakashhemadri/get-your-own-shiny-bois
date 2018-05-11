@@ -8,7 +8,7 @@
  }
 
  function displayPreviousImage() {
-     currentIndex = (currentIndex <= startIndecurrentIndex) ? 3 : currentIndex - 1;
+     currentIndex = (currentIndex <= startIndecurrentIndex) ? numberOfImages : currentIndex - 1;
      document.getElementById("img").src = images + currentIndex + ".jpg";
  }
 

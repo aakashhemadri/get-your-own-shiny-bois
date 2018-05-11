@@ -68,10 +68,6 @@ div#products a{
     color: orange;
     display: block;
 }
-div#sep{
-    width: 25%;
-    float:left;
-}
 
 footer {
     width: 100%;

@@ -26,7 +26,10 @@
 			padding-left:30%;
 		}
 		hr{
-			width: 75%
+			width: 75%;
+			color: white;
+			height:0.5%;
+			background-color: white;
 		}
 	</style>
 </head>
@@ -42,7 +45,9 @@
 				<div id="main">
 
 				<div id="product-image">
-					<img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/>
+					<a href="">
+						<img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/>
+					</a>
 				</div> 
 
 				<h1>' . $row['pname']."  ".$row['pmodel'] ."</h1> <h2>" . $row['pprice'] . "</h2>";

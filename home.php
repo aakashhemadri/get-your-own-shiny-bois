@@ -54,12 +54,14 @@
 		<div id="side">
 			<a id="title">BRANDS</a><br>
 			<hr style="color:orange;">
-			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[0] . '">'.$hot_product[0].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[1] . '">'.$hot_product[1].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[2] . '">'.$hot_product[2].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[3] . '">'.$hot_product[3].'</a>';?><br>
-			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[4] . '">'.$hot_product[4].'</a>';?><br>
+			
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[0] . '">'.$hot_product[0].'</a>';?><br><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[1] . '">'.$hot_product[1].'</a>';?><br><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[2] . '">'.$hot_product[2].'</a>';?><br><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[3] . '">'.$hot_product[3].'</a>';?><br><br>
+			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[4] . '">'.$hot_product[4].'</a>';?><br><br>
 			<?php echo '<a href="pages/brands.php?tag=' . $hot_product[5] . '">'.$hot_product[5].'</a>';?><br>
+			
 			<hr style="color:orange;">
 		</div>
 		<div id="products">
