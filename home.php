@@ -42,7 +42,7 @@
 			<hr style="color:orange;">
 		</div>
 		<div id="products">
-			<a>Featured products</a>
+			<a style="text-align: center;">Featured products</a>
 			<?php require "php/featured.php"; ?>
 		</div>
 	</div>
