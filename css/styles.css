@@ -45,7 +45,7 @@ div#products{
     background-color: black;
     /*border-left-style: solid;
     border-left-color: orange;*/
-    width:80%;
+    width:75%;
     height:10%;
     text-align:center;
     font-size:23px;
@@ -76,8 +76,8 @@ footer a {
 /*************************** FEATURED ************************************/
 #product-image img{
             padding:1em;
-            width: 190px;
-            height: 190px;
+            width: 180px;
+            height: 180px;
 }
 #over{
             float:left;

@@ -28,7 +28,7 @@ print('<nav>
 				<a href="'.$dir.'pages/list.php?tag=BUDGET">BUDGET</a>
 				<a href="'.$dir.'pages/list.php?tag=CAMERA">CAMERA</a>
 				<div style="float:right;margin-right: 10px;">
-					<a href="'.$dir.'pages/contact.php">CONTACT</a>
+					<!--<a href="'.$dir.'pages/contact.php">CONTACT</a>-->
 					<a href="'.$dir.'pages/about.php">ABOUT</a>
 				</div>
 			</div>
