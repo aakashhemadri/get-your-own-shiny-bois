@@ -50,24 +50,28 @@
 	<?php 
 		if($result->num_rows > 0){
 			while($rows = $result->fetch_assoc()){
+				$q = "SELECT * FROM `product` WHERE `pid`=". $rows['pid'];
+				$newresult = $db->query($q);
+				$newrow = $newresult->fetch_assoc();
+
 				echo'  
 
 				<div id="main">
 
 				<div id="product-image">
-					<a id="link" href="../pages/product.php?prod='.$row['pid'].'">
-						<img  src="data:image/jpeg;base64,' .base64_encode($row["pimage"]).'"/>
+					<a id="link" href="../pages/product.php?prod='.$newrow['pid'].'">
+						<img  src="data:image/jpeg;base64,' .base64_encode($newrow["pimage"]).'"/>
 					</a>
 				</div> 
 
-				<a id="link" href="../pages/product.php?prod='.$row['pid'].'"><h1>' . $row['pname']."  ".$row['pmodel'] ."</h1></a> <h2>" . $row['pprice'] . "</h2>";
+				<a id="link" href="../pages/product.php?prod='.$newrow['pid'].'"><h1>' . $newrow['pname']."  ".$newrow['pmodel'] ."</h1></a> <h2>" . $newrow['pprice'] . "</h2>";
 
 				echo '<h3>Highlights</h3>
 						<div id="List">
 							<ul>
-								<li>' . $row['pstorage'] . '</li><br>
-								<li>' . $row['pcamera']  . '</li><br>
-								<li>' . $row['pram']   . '</li><br>
+								<li>' . $newrow['pstorage'] . '</li><br>
+								<li>' . $newrow['pcamera']  . '</li><br>
+								<li>' . $newrow['pram']   . '</li><br>
 							</ul>
 						</div>
 						<hr>
