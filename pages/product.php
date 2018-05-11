@@ -43,8 +43,8 @@ $result = $db->query($sql);
 			list-style-type: square;
 		}
 		#Buy,#Cart,#More{
-			width: 15%;
-			height: 7%;
+			width: 13%;
+			height: 4%;
 			background-color: #E8943A;
 			outline: none;
 			border: none;
@@ -58,7 +58,7 @@ $result = $db->query($sql);
 		#More{
 			background-color: 059840;
 		}
-	
+
 		#page1{
 			width: 100%;
 			float: left;
@@ -103,7 +103,7 @@ $result = $db->query($sql);
 						</ul>';
 
 						echo '<input type="button" id="Buy" value="Buy">'."&nbsp;&nbsp;&nbsp;&nbsp;" .
-						 '<a href="../php/addtocart.php?pid='.$product.'"><input type="button" id="Cart" value="Add to cart"></a>&nbsp;&nbsp;&nbsp;&nbsp;
+						 '<a href="../php/addtocart.php?pid='.$product.'" style="text-decoration:none;"><input type="button" id="Cart" value="Add to cart"></a>&nbsp;&nbsp;&nbsp;&nbsp;
 
 						 <a href="#list1" style="text-decoration:none;">
 						  	<input type="button" id="More" value="More">
