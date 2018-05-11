@@ -41,6 +41,18 @@
 			height:0.5%;
 			background-color: white;
 		}
+		#Buy,#Remove{
+			width: 13%;
+			height: 8%;
+			background-color: #E8943A;
+			outline: none;
+			border: none;
+			border-radius: 1cm;
+		}
+
+		#Remove{
+			background-color: #E5491F;
+		}
 	
 	</style>
 </head>
@@ -74,6 +86,8 @@
 								<li>' . $newrow['pram']   . '</li><br>
 							</ul>
 						</div>
+						<input type="button" id="Buy" value="Buy">&nbsp;&nbsp;
+						  <a href="../pages/remove.php?prod='.$rows['pid'].'"style="text-decoration:none;">.<input type="button" id="Remove" value="Remove"></a><br><br>
 						<hr>
 						<br>
 				</div>
