@@ -37,6 +37,7 @@ button {
     cursor: pointer;
     width: 100%;
     opacity: 0.9;
+    border-radius: 1cm;
 }
 
 button:hover {
@@ -74,4 +75,10 @@ button:hover {
     background-color: white;
     margin-left: 30%;
     margin-top: 1%;
+}
+.help-block {
+  display: block;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  color: #737373;
 }

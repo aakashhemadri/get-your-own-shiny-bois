@@ -39,45 +39,53 @@ nav div#lowerNav a:hover {
     background-color: #ddd;
 }
 
-/* SIDE NAV */
+input#searchbox{
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: black;
+    text-shadow: none;
+    color: white;
+}
 
-#bra{
-    width:12%;
-    background-color: #FFDCDB;
-    height:5%;
+input#search {
+    outline: none;
+    border: none;
+    margin-top: 10px;
+    border-radius: 4px;
+    background-color: black;
+}
+
+/**************************** SIDE NAV ***************************/
+
+div#side{
+    margin: 0.5em;
+    float: left;
+    background-color: black;
+    width:20%;
     text-align:center;
     font-size:23px;
-    color: violet;
+    color: white;
+    display: block;
 }
-.side{
-        float:left;
-        width:12%;
-        background-color:#FFDCDB;
-        text-align:center;
-        font-size:23px;
-        margin-top: 0px;
-        border:2px hidden black;
-        height:50%px;
-    }
-    
-    .side a{
-        display:block;
-        padding:10px 10px;
-        text-decoration : none;
-    }
-    
-    .side a:hover{
-        background-color:#33cc33;
-        color:white;
-    }
-
-
-div#products{
+div#side a#title{
     float: left;
-    width: 50%;
+    text-align: center;
+    text-decoration: none;
+    color: orange;
+    display: block;
+}
+div#side a{
+    float: left;
+    text-align: center;
+    
+    text-decoration: none;
+    color: white;
+    display: block;
 }
 
-div#sep{
-    width: 25%;
-    float:left;
+div#side a:hover{
+    color: orange;
+    display: block;
 }

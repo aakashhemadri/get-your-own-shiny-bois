@@ -1,6 +1,6 @@
  var images = "images/slide",
  currentIndex = 1;
- numberOfImages = 3;
+ numberOfImages = 8;
  startIndecurrentIndex = 1;
  function displayNecurrentIndextImage() {
      currentIndex = (currentIndex == numberOfImages) ? startIndecurrentIndex : currentIndex + 1;
@@ -8,7 +8,7 @@
  }
 
  function displayPreviousImage() {
-     currentIndex = (currentIndex <= startIndecurrentIndex) ? 3 : currentIndex - 1;
+     currentIndex = (currentIndex <= startIndecurrentIndex) ? numberOfImages : currentIndex - 1;
      document.getElementById("img").src = images + currentIndex + ".jpg";
  }
 

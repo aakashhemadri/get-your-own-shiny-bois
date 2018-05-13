@@ -3,7 +3,7 @@
 	define('DB_USERNAME', 'root');
 	define('DB_PASSWORD', '');
 	define('DB_NAME', 'g4u');
-	$db=new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_NAME);
+	$db = new mysqli(DB_SERVER,DB_USERNAME,DB_PASSWORD,DB_NAME);
 	if($db->connect_errno){
 		die($db->connect_error);
 	}
